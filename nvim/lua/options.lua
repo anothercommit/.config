@@ -45,11 +45,11 @@ o.timeoutlen = 600
 o.splitright = true
 o.splitbelow = true
 
--- Sets how neovim will display certain whitespace characters in the editor.
+-- mostrar caracteres en los tab y etc
 --  See `:help 'list'`
+o.list = false
 --  and `:help 'listchars'`
-o.list = true
--- o.listchars = { tab = '» ', trail = '·', nbsp = '␣', eol = '' }
+o.listchars = { tab = '»', trail = '·', nbsp = '␣', eol = '' }
 
 -- Preview substitutions live, as you type!
 o.inccommand = 'split'
