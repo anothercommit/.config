@@ -1,6 +1,6 @@
 # Brillo
 XF86MonBrightness{Up,Down}
-    cambiarbrillo {up,down}
+    dunstbrillo {up,down}
 
 # Audio
 XF86Audio{Play,Next,Prev}
@@ -24,6 +24,9 @@ super + {_,shift} + v
 
 control + space
     rofi -show drun
+
+super + l
+    betterlockscreen -l dim
 
 # Screenshots
 Print
