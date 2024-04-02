@@ -381,6 +381,12 @@ globalkeys = gears.table.join(
 		menubar.show()
 	end, { description = "show the menubar", group = "run" }),
 
+	awful.key({ modkey, "Shift" }, "p", function()
+		awful.util.spawn_with_shell(
+			"alacritty -e nvim '/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Palabras, inglés.md'"
+		)
+	end, { description = "Abre rofi", group = "abrir" }),
+
 	-- Abrir
 	awful.key({ "Control" }, "space", function()
 		awful.spawn("rofi -show drun")
