@@ -73,17 +73,7 @@ return {
       clangd = {},
       rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
-      pylsp = {
-        settings = {
-          pylsp = {
-            plugins = {
-              pylint = { enabled = false },
-              pyflakes = { enabled = false },
-              pycodestyle = { enabled = false },
-            },
-          },
-        },
-      },
+      pyright = {},
       tsserver = {},
       lua_ls = {
         settings = {
@@ -103,7 +93,7 @@ return {
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
       'clangd',
-      'pylsp',
+      'pyright',
       'rust_analyzer',
       'tsserver',
       'prettierd',

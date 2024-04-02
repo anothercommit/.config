@@ -84,6 +84,11 @@ return {
           preset = 'default',
         },
       },
+      -- window = {
+      --   documentation = {
+      --     border = 'rounded',
+      --   },
+      -- },
     }
   end,
 }
