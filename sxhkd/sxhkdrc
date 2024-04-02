@@ -1,0 +1,5 @@
+{_,super + }XF86MonBrightness{Down,Up}
+	brillo {-q -U 5,-S 0,-q -A 5,-S 100}
+
+super + o ; {o,a}
+	{obsidian,alacritty}
