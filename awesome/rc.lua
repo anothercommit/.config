@@ -380,33 +380,6 @@ globalkeys = gears.table.join(
 	awful.key({ modkey }, "p", function()
 		menubar.show()
 	end, { description = "show the menubar", group = "run" })
-
-	-- Media
-	-- awful.key({}, "XF86AudioPlay", function()
-	-- 	awful.util.spawn_with_shell("playerctl play-pause")
-	-- end, { description = "Play-pause", group = "media" }),
-	-- awful.key({}, "XF86AudioNext", function()
-	-- 	awful.util.spawn_with_shell("playerctl next")
-	-- end, { description = "Next", group = "media" }),
-	-- awful.key({}, "XF86AudioPrev", function()
-	-- 	awful.util.spawn_with_shell("playerctl previous")
-	-- end, { description = "Previous", group = "media" }),
-	-- Audio
-	-- awful.key({}, "XF86AudioMute", function()
-	-- 	awful.util.spawn_with_shell("amixer sset Master toggle")
-	-- end, { description = "Mute", group = "media" }),
-	-- awful.key({}, "XF86AudioRaiseVolume", function()
-	-- 	awful.util.spawn_with_shell("amixer sset Master 1%+")
-	-- end, { description = "Subir volumen +1", group = "media" }),
-	-- awful.key({}, "XF86AudioLowerVolume", function()
-	-- 	awful.util.spawn_with_shell("amixer sset Master 1%-")
-	-- end, { description = "Bajar el volumen -1", group = "media" }),
-	-- awful.key({ "Shift" }, "XF86AudioRaiseVolume", function()
-	-- 	awful.util.spawn_with_shell("amixer sset Master 15%+")
-	-- end, { description = "Bajar el volumen 15", group = "media" }),
-	-- awful.key({ "Shift" }, "XF86AudioLowerVolume", function()
-	-- 	awful.util.spawn_with_shell("amixer sset Master 15%-")
-	-- end, { description = "Bajar el volumen -15", group = "media" })
 )
 
 clientkeys = gears.table.join(

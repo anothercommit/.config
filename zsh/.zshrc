@@ -83,7 +83,6 @@ alias df='df -h'
 alias sudodu='sudo du -sh'
 alias sudodf='sudo df -h'
 alias keysoup="sudo systemctl restart keyd"
-alias b="bat -p"
 
 # Git aliases
 alias g='git'
