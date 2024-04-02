@@ -1,5 +1,39 @@
-{_,super + }XF86MonBrightness{Down,Up}
-	brillo {-q -U 5,-S 0,-q -A 5,-S 100}
+# Brillo
+XF86MonBrightness{Up,Down}
+    cambiarbrillo {up,down}
 
-super + o ; {o,a}
-	{obsidian,alacritty}
+# Audio
+XF86Audio{Play,Next,Prev}
+    playerctl {play-pause,next,previous}
+
+XF86Audio{Mute,RaiseVolume,LowerVolume}
+    amixer sset Master {toggle,1%+,1%-}
+
+shift + XF86Audio{RaiseVolume,LowerVolume}
+    amixer sset Master {15%+,15%-}
+
+# run
+alt + shift + {b,o}
+    {chromium,obsidian}
+
+alt + shift + p
+    alacritty -e nvim '/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Palabras, inglés.md'
+
+super + {_,shift} + v
+    {copyq menu,copyq show}
+
+control + space
+    rofi -show drun
+
+# Screenshots
+Print
+    maim | xclip -selection clipboard -t image/png
+
+shift + Print
+    maim -su | xclip -selection clipboard -t image/png
+
+super + Print
+    maim /home/joaco/Media/Imagenes/Capturas/$(date +%s).jpg
+
+super + shift + Print
+    maim -su /home/joaco/Media/Imagenes/Capturas/$(date +%s).jpg

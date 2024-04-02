@@ -379,88 +379,34 @@ globalkeys = gears.table.join(
 	-- Menubar
 	awful.key({ modkey }, "p", function()
 		menubar.show()
-	end, { description = "show the menubar", group = "run" }),
-
-	awful.key({ modkey, "Shift" }, "p", function()
-		awful.util.spawn_with_shell(
-			"alacritty -e nvim '/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Palabras, inglés.md'"
-		)
-	end, { description = "Abre rofi", group = "abrir" }),
-
-	-- Abrir
-	awful.key({ "Control" }, "space", function()
-		awful.spawn("rofi -show drun")
-	end, { description = "Abre rofi", group = "abrir" }),
-	awful.key({ modkey }, "v", function()
-		awful.spawn("copyq menu")
-	end, { description = "Abre el portapapeles", group = "abrir" }),
-	awful.key({ modkey, "Shift" }, "v", function()
-		awful.spawn("copyq show")
-	end, { description = "Abre el portapapeles en una ventana", group = "abrir" }),
-	awful.key({ alt, "Shift" }, "b", function()
-		awful.spawn(browser)
-	end, { description = "Abre el navegador", group = "abrir" }),
-	awful.key({ alt, "Shift" }, "c", function()
-		awful.spawn(calculadora)
-	end, { description = "Abre la calculadora", group = "abrir" }),
-	awful.key({ alt, "Shift" }, "o", function()
-		awful.spawn("obsidian")
-	end, { description = "Abre obsidian", group = "abrir" }),
-
-	-- Screenshots
-	awful.key({}, "Print", function()
-		awful.util.spawn_with_shell("maim | xclip -selection clipboard -t image/png")
-	end, { description = "Captura de pantalla", group = "media" }),
-	awful.key({ "Shift" }, "Print", function()
-		awful.util.spawn_with_shell("maim -su | xclip -selection clipboard -t image/png")
-	end, { description = "Recorte", group = "media" }),
-	awful.key({ modkey }, "Print", function()
-		awful.util.spawn_with_shell("maim /home/joaco/Media/Imagenes/Capturas/$(date +%s).jpg")
-	end, { description = "Guardar captura de pantalla", group = "media" }),
-	awful.key({ modkey, "Shift" }, "Print", function()
-		awful.util.spawn_with_shell("maim -su /home/joaco/Media/Imagenes/Capturas/$(date +%s).jpg")
-	end, { description = "Guardar recorte", group = "media" }),
-
-	-- Brillo
-	awful.key({}, "XF86MonBrightnessUp", function()
-		awful.util.spawn_with_shell("brillo -q -A 5")
-	end, { description = "Subir brillo", group = "media" }),
-	awful.key({}, "XF86MonBrightnessDown", function()
-		awful.util.spawn_with_shell("brillo -q -U 5")
-	end, { description = "Bajar brillo", group = "media" }),
-	awful.key({ "Shift" }, "F12", function()
-		awful.util.spawn_with_shell("brillo -q -A 5")
-	end, { description = "Subir brillo", group = "media" }),
-	awful.key({ "Shift" }, "F11", function()
-		awful.util.spawn_with_shell("brillo -q -U 5")
-	end, { description = "Bajar brillo", group = "media" }),
+	end, { description = "show the menubar", group = "run" })
 
 	-- Media
-	awful.key({}, "XF86AudioPlay", function()
-		awful.util.spawn_with_shell("playerctl play-pause")
-	end, { description = "Play-pause", group = "media" }),
-	awful.key({}, "XF86AudioNext", function()
-		awful.util.spawn_with_shell("playerctl next")
-	end, { description = "Next", group = "media" }),
-	awful.key({}, "XF86AudioPrev", function()
-		awful.util.spawn_with_shell("playerctl previous")
-	end, { description = "Previous", group = "media" }),
+	-- awful.key({}, "XF86AudioPlay", function()
+	-- 	awful.util.spawn_with_shell("playerctl play-pause")
+	-- end, { description = "Play-pause", group = "media" }),
+	-- awful.key({}, "XF86AudioNext", function()
+	-- 	awful.util.spawn_with_shell("playerctl next")
+	-- end, { description = "Next", group = "media" }),
+	-- awful.key({}, "XF86AudioPrev", function()
+	-- 	awful.util.spawn_with_shell("playerctl previous")
+	-- end, { description = "Previous", group = "media" }),
 	-- Audio
-	awful.key({}, "XF86AudioMute", function()
-		awful.util.spawn_with_shell("amixer sset Master toggle")
-	end, { description = "Mute", group = "media" }),
-	awful.key({}, "XF86AudioRaiseVolume", function()
-		awful.util.spawn_with_shell("amixer sset Master 1%+")
-	end, { description = "Subir volumen +1", group = "media" }),
-	awful.key({}, "XF86AudioLowerVolume", function()
-		awful.util.spawn_with_shell("amixer sset Master 1%-")
-	end, { description = "Bajar el volumen -1", group = "media" }),
-	awful.key({ "Shift" }, "XF86AudioRaiseVolume", function()
-		awful.util.spawn_with_shell("amixer sset Master 15%+")
-	end, { description = "Bajar el volumen 15", group = "media" }),
-	awful.key({ "Shift" }, "XF86AudioLowerVolume", function()
-		awful.util.spawn_with_shell("amixer sset Master 15%-")
-	end, { description = "Bajar el volumen -15", group = "media" })
+	-- awful.key({}, "XF86AudioMute", function()
+	-- 	awful.util.spawn_with_shell("amixer sset Master toggle")
+	-- end, { description = "Mute", group = "media" }),
+	-- awful.key({}, "XF86AudioRaiseVolume", function()
+	-- 	awful.util.spawn_with_shell("amixer sset Master 1%+")
+	-- end, { description = "Subir volumen +1", group = "media" }),
+	-- awful.key({}, "XF86AudioLowerVolume", function()
+	-- 	awful.util.spawn_with_shell("amixer sset Master 1%-")
+	-- end, { description = "Bajar el volumen -1", group = "media" }),
+	-- awful.key({ "Shift" }, "XF86AudioRaiseVolume", function()
+	-- 	awful.util.spawn_with_shell("amixer sset Master 15%+")
+	-- end, { description = "Bajar el volumen 15", group = "media" }),
+	-- awful.key({ "Shift" }, "XF86AudioLowerVolume", function()
+	-- 	awful.util.spawn_with_shell("amixer sset Master 15%-")
+	-- end, { description = "Bajar el volumen -15", group = "media" })
 )
 
 clientkeys = gears.table.join(

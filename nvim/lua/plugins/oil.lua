@@ -1,8 +1,5 @@
 return {
   'stevearc/oil.nvim',
-  keys = {
-    { '<leader>o', '<cmd>Oil<cr>', desc = '[O]il' },
-  },
   opts = {
     default_file_explorer = true,
 

@@ -12,6 +12,9 @@ o.relativenumber = true
 o.mouse = 'a'
 
 o.showmode = false
+o.tabstop = 4
+o.shiftwidth = 4
+o.expandtab = true
 
 --  Remove this option if you want your OS clipboard to remain independent.
 -- o.clipboard = 'unnamedplus'
@@ -49,7 +52,7 @@ o.splitbelow = true
 --  See `:help 'list'`
 o.list = false
 --  and `:help 'listchars'`
-o.listchars = { tab = '»', trail = '·', nbsp = '␣', eol = '' }
+--o.listchars = { tab = '»', trail = '·', nbsp = '␣', eol = '' }
 
 -- Preview substitutions live, as you type!
 o.inccommand = 'split'
