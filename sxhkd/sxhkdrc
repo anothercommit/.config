@@ -13,6 +13,9 @@ shift + XF86Audio{RaiseVolume,LowerVolume}
     amixer sset Master {15%+,15%-}
 
 # run
+super + Return
+    alacritty
+
 alt + shift + {b,o}
     {chromium,obsidian}
 
