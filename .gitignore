@@ -9,6 +9,8 @@
 !rofi/
 !redshift/
 !dunst/
+!betterlockscreen/
+!keyd
 !starship.toml
 
 !.gitmodules
