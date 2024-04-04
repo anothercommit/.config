@@ -6,3 +6,5 @@ run() {
     "$@"&
   fi
 }
+
+run "sxhkd"
