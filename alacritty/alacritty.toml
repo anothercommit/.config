@@ -29,19 +29,19 @@ foreground = "#cbd3f8"
 size = 12
 
 [font.bold]
-family = "JetBrains Mono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrains Mono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "BoldItalic"
 
 [font.italic]
-family = "JetBrains Mono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "MediumItalic"
 
 [font.normal]
-family = "JetBrains Mono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Medium"
 
 [selection]

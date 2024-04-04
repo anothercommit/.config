@@ -14,13 +14,13 @@ shift + XF86Audio{RaiseVolume,LowerVolume}
 
 # run
 super + Return
-    kitty
+    alacritty
 
 alt + shift + {b,o}
     {chromium,obsidian}
 
 alt + shift + p
-    kitty -e nvim '/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Palabras, inglés.md'
+    alacritty -e nvim '/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Palabras, inglés.md'
 
 super + {_,shift} + v
     {copyq menu,copyq show}
