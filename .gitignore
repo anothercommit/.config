@@ -2,6 +2,7 @@
 
 !picom/
 !nvim/
+nvim/lazy-lock.json
 !lf/
 !ly/
 !awesome/
