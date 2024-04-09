@@ -28,6 +28,9 @@ super + {_,shift} + v
 control + space
     rofi -show drun
 
+super + period
+    rofimoji -a copy
+
 alt + shift + l
     betterlockscreen -l dim
 

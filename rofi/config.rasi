@@ -1,6 +1,6 @@
 configuration {
-    font:   "JetBrainsMono Nerd Font Bold 12";
-	modi: "drun,emoji";
+    font:   "JetBrainsMonoNL Nerd Font Bold 12";
+	modi: "drun";
     show-icons: true;
     display-drun: "";
     display-cal: "";
