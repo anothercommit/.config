@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 figlet -c -t -f 3d "i use arch btw" | lolcat
+=======
+# when
+#figlet -c -t -f 3d "i use arch btw" | lolcat
+>>>>>>> 0b06020e3dc0ad404b6495bcb6e18059dafdb72b
 
 plugins=(git)
 

@@ -23,7 +23,9 @@ o.expandtab = true
 o.breakindent = true
 
 -- Save undo history
-o.undofile = true
+if vim.loop.os_uname().sysname ~= 'Darwin' then
+  o.undofile = true
+end
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 o.ignorecase = true
