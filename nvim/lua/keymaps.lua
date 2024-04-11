@@ -7,7 +7,7 @@ keymap('n', '<C-u>', [[<C-u>zz]], { noremap = 'true' })
 keymap('n', 'n', [[nzzzv]], { noremap = 'true' })
 keymap('n', 'N', [[Nzzzv]], { noremap = 'true' })
 
-keymap('n', '<C-s>', '<cmd>w<cr>', { noremap = 'true' })
+keymap({ 'n', 'i' }, '<C-s>', '<cmd>w<cr><esc>', { noremap = 'true' })
 keymap('n', '<C-q>', '<cmd>qa<cr>', { noremap = 'true' })
 keymap('n', ',w', '<cmd>w<cr>', { noremap = 'true' })
 keymap('n', ',q', '<cmd>qa<cr>', { noremap = 'true' })
