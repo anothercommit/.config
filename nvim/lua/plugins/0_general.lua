@@ -15,12 +15,6 @@ return {
     'numToStr/Comment.nvim',
     opts = {
       ignore = '^$', --ignore empty lines
-      toggler = {
-        line = '<C-/>',
-      },
-      opleader = {
-        line = '<C-/>',
-      },
     },
   },
   {
