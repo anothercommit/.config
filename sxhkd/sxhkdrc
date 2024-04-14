@@ -7,10 +7,10 @@ XF86Audio{Play,Next,Prev}
     playerctl {play-pause,next,previous}
 
 XF86Audio{Mute,RaiseVolume,LowerVolume}
-    amixer sset Master {toggle,1%+,1%-}
+    dunstvol {toggle,up,down}
 
 shift + XF86Audio{RaiseVolume,LowerVolume}
-    amixer sset Master {15%+,15%-}
+    dunstvol {UP,DOWN}
 
 # run
 super + Return
