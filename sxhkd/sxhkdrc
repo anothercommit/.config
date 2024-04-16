@@ -16,6 +16,9 @@ shift + XF86Audio{RaiseVolume,LowerVolume}
 super + Return
     alacritty
 
+alt + shift + e
+    thunar
+
 alt + shift + {b,o}
     {chromium,obsidian}
 
