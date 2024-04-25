@@ -283,7 +283,7 @@ globalkeys = gears.table.join(
 		awful.client.focus.global_bydirection("left")
 	end, { description = "focus next window left", group = "client" }),
 
-	awful.key({ modkey }, "w", function()
+	awful.key({ modkey, "Shift" }, "w", function()
 		mymainmenu:show()
 	end, { description = "show main menu", group = "awesome" }),
 
@@ -387,7 +387,7 @@ clientkeys = gears.table.join(
 		c.fullscreen = not c.fullscreen
 		c:raise()
 	end, { description = "toggle fullscreen", group = "client" }),
-	awful.key({ modkey, "Shift" }, "c", function(c)
+	awful.key({ modkey }, "w", function(c)
 		c:kill()
 	end, { description = "close", group = "client" }),
 	awful.key(
