@@ -34,12 +34,6 @@ keymap('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- keymap('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
--- TIP: Disable arrow keys in normal mode
-keymap('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
-keymap('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
-keymap('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
-keymap('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
-
 --  See `:help wincmd` for a list of all window commands
 keymap('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 keymap('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })

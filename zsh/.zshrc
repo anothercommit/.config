@@ -105,3 +105,4 @@ alias comandos='bat "/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Informática/Com
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"

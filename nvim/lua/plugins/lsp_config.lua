@@ -70,10 +70,17 @@ return {
     capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
     local servers = {
+      -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
       clangd = {},
       rust_analyzer = {},
-      -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
-      pyright = {},
+      pylsp = {
+        settings = {
+          pylsp = {
+            pylsp_mypy = { enabled = false },
+          },
+        },
+      },
+      bashls = {},
       tsserver = {},
       lua_ls = {
         settings = {
@@ -91,14 +98,12 @@ return {
 
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
-      'stylua', -- Used to format Lua code
+      'stylua',
       'clangd',
-      'pyright',
+      'pylsp',
       'rust_analyzer',
       'tsserver',
       'prettierd',
-      'isort',
-      'black',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
