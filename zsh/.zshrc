@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 figlet -c -t -f 3d "i use arch btw" | lolcat
 =======
-# when
-#figlet -c -t -f 3d "i use arch btw" | lolcat
->>>>>>> 0b06020e3dc0ad404b6495bcb6e18059dafdb72b
 
 plugins=(git)
 
@@ -70,8 +66,11 @@ alias chromium="chromium --force-dark-mode --enable-features=WebUIDarkMode"
 # alias code='codium'
 
 # CLI aliases
-alias n='nvim'
 alias sn='sudo nvim'
+alias n='nvim'
+alias ncolemak='vz=NVIM_APPNAME=colemak nvim'
+alias nqwerty='vz=NVIM_APPNAME=qwerty nvim'
+
 alias e='exa'
 alias ea='exa -a'
 alias el='exa -al'
@@ -105,4 +104,3 @@ alias comandos='bat "/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Informática/Com
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
