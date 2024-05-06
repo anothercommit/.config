@@ -30,6 +30,11 @@ mkcd ()
   mkdir -p -- "$1" && cd -P -- "$1"
 }
 
+nv() {
+  select config in colemak qwerty 
+  do NVIM_APPNAME=$config nvim $@; break; done
+}
+
 # rmthis ()
 # {
 #   cd '..' -p && rm -rf -P -- "$1"
@@ -68,8 +73,6 @@ alias chromium="chromium --force-dark-mode --enable-features=WebUIDarkMode"
 # CLI aliases
 alias sn='sudo nvim'
 alias n='nvim'
-alias ncolemak='vz=NVIM_APPNAME=colemak nvim'
-alias nqwerty='vz=NVIM_APPNAME=qwerty nvim'
 
 alias e='exa'
 alias ea='exa -a'
