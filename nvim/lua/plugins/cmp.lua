@@ -50,7 +50,6 @@ return {
         --  This will expand snippets if the LSP sent a snippet.
         -- ['<C-y>'] = cmp.mapping.confirm { select = true },
         ['<CR>'] = cmp.mapping.confirm { select = true },
-
         ['<C-e>'] = cmp.mapping.complete {},
 
         -- Think of <c-l> as moving to the right of your snippet expansion.
