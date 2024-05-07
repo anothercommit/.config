@@ -31,7 +31,7 @@ mkcd ()
 
 nv() {
   select config in colemak qwerty 
-  do NVIM_APPNAME=$config nvim $@; break; done
+  do NVIM_APPNAME=nvim-$config nvim $@; break; done
 }
 
 # rmthis ()
