@@ -1,12 +1,10 @@
 import = [ 
-    "~/.config/alacritty/themes/blood_moon.toml" 
+    "~/.config/alacritty/themes/blood_moon.toml",
+    "~/.config/alacritty/font_size.toml" 
 ]
 
 [colors]
 draw_bold_text_with_bright_colors = true
-
-[font]
-size = 11
 
 [font.bold]
 family = "JetBrainsMonoNL Nerd Font"

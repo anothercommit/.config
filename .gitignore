@@ -1,12 +1,17 @@
 /*
 
 !picom/
+
 !nvim/
 nvim/lazy-lock.json
+
 !lf/
 !ly/
 !awesome/
+
 !alacritty/
+alacritty/font_size.toml
+
 !kitty/
 !zsh/
 !rofi/
