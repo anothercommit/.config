@@ -14,16 +14,12 @@ return {
         {
           'mode',
           icon = '',
-          color = {
-            bg = '',
-            fg = 'auto',
-          },
         },
       },
       lualine_b = { { 'branch', icon = '' }, 'diff', 'diagnostics' },
       lualine_c = {
         { 'filetype', icon_only = true, separator = '', padding = { left = 1, right = 0 } },
-        { 'filename', padding = { left = 0 } },
+        { 'filename', padding = { left = 1 } },
       },
       lualine_x = {},
       lualine_y = { 'progress', 'location' },
