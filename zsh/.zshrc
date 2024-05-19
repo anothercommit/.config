@@ -104,5 +104,5 @@ alias herramientas='bat "/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Informática
 alias comandos='bat "/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Informática/Comandos recurrentes.md"'
 # }}}
 
-eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
