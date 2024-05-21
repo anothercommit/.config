@@ -7,7 +7,6 @@ plugins=(git)
 
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.cache/zsh/history
 
 autoload -U compinit
 zstyle '*:completion*' menu select
