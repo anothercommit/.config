@@ -1,9 +1,17 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# when
 figlet -c -t -f 3d "i use arch btw" | lolcat
 
-plugins=(git)
+#plugins=(git)
 
-# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 HISTSIZE=10000
 SAVEHIST=10000
@@ -26,11 +34,6 @@ export PATH="/home/joaco/.local/bin:$PATH"
 mkcd ()
 {
   mkdir -p -- "$1" && cd -P -- "$1"
-}
-
-nv() {
-  select config in colemak qwerty 
-  do NVIM_APPNAME=nvim-$config nvim $@; break; done
 }
 
 # rmthis ()
@@ -61,17 +64,16 @@ alias l='ls --color'
 alias la='ls --color --almost-all'
 
 # Files
-alias zshedit='nvim ~/.config/zsh/.zshrc'
-alias zshsource='source ~/.config/zsh/.zshrc'
+alias zshedit='nvim ~/.zshrc'
+alias zshsource='source ~/.zshrc'
 
 # Programs
 alias chromium="chromium --force-dark-mode --enable-features=WebUIDarkMode"
 # alias code='codium'
 
 # CLI aliases
-alias sn='sudo nvim'
 alias n='nvim'
-
+alias sn='sudo nvim'
 alias e='exa'
 alias ea='exa -a'
 alias el='exa -al'
@@ -104,4 +106,7 @@ alias comandos='bat "/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Informática/Com
 # }}}
 
 eval "$(zoxide init zsh)"
-source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
