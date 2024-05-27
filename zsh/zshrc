@@ -52,6 +52,8 @@ bindkey -s '^o' 'lfcd\n'
 
 # Aliases {{{
 
+alias py='python'
+
 # Basic aliases
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -63,10 +65,6 @@ alias la='ls --color --almost-all'
 # Files
 alias zshedit='nvim ~/.zshrc'
 alias zshsource='source ~/.zshrc'
-
-# Programs
-alias chromium="chromium --force-dark-mode --enable-features=WebUIDarkMode"
-# alias code='codium'
 
 # CLI aliases
 alias n='nvim'
