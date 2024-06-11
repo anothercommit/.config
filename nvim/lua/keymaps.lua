@@ -7,14 +7,11 @@ keymap('n', '<C-u>', [[<C-u>zz]], { noremap = 'true' })
 keymap('n', 'n', [[nzzzv]], { noremap = 'true' })
 keymap('n', 'N', [[Nzzzv]], { noremap = 'true' })
 
-keymap({ 'n', 'i' }, '<C-s>', '<cmd>w<cr><esc>', { noremap = 'true' })
-keymap('n', '<C-q>', '<cmd>qa<cr>', { noremap = 'true' })
-keymap('n', ',w', '<cmd>w<cr>', { noremap = 'true' })
-keymap('n', ',q', '<cmd>qa<cr>', { noremap = 'true' })
-
 keymap({ 'n', 'v' }, [[<leader>y]], [["+y]], { desc = 'Yank to clipboard', noremap = 'true' })
 keymap('i', 'jk', '<Esc>', { desc = 'Exit insert mode', noremap = 'true' })
-keymap({ 'n', 'v' }, '<BS>', '<Esc>', { noremap = 'true' })
+
+keymap('n', '<BS>', '<cmd>:w<cr>', { noremap = 'true' })
+keymap('v', '<BS>', '<esc>', { noremap = 'true' })
 
 keymap({ 'n', 'i' }, '<A-j>', '<cmd>m+<CR>', { desc = 'move line down', noremap = 'true' })
 keymap({ 'n', 'i' }, '<A-k>', '<cmd>m-2<CR>', { desc = 'move line up', noremap = 'true' })
