@@ -4,6 +4,10 @@ return {
   },
   {
     'nyoom-engineering/oxocarbon.nvim',
+    priority = 1000,
+    init = function()
+      vim.cmd.colorscheme 'oxocarbon'
+    end,
   },
   {
     'tiagovla/tokyodark.nvim',
@@ -50,6 +54,7 @@ return {
   },
   {
     'akinsho/horizon.nvim',
+<<<<<<< HEAD
 
     -- Cortar y pegar esto en el tema a usar
     lazy = false,
@@ -57,5 +62,7 @@ return {
     init = function()
       vim.cmd.colorscheme 'horizon'
     end,
+=======
+>>>>>>> 4f4420f0bb958f68b5524a6e91644a28c7d3cec3
   },
 }

@@ -12,7 +12,9 @@ return { -- Autoformat
     formatters_by_ft = {
       lua = { 'stylua' },
       -- python = { 'ruff' },
-      javascript = { { 'prettierd', 'prettier' } },
+      javascript = { 'prettier' },
+      html = { 'prettier' },
+      css = { 'prettier' },
     },
   },
 }
