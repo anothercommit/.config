@@ -6,6 +6,11 @@ o.termguicolors = true
 o.writebackup = false
 o.swapfile = false
 
+-- mostrar una status bar global al trabajar con splits
+vim.opt.laststatus = 3
+-- mostrar la tabline: 0 (nunca), 1 (+1 archivo), 2 (siempre)
+vim.opt.showtabline = 2
+
 -- que cuando hay un comentario, 'o' u 'O' no continue comentando
 vim.api.nvim_create_autocmd('FileType', {
   pattern = '*',
