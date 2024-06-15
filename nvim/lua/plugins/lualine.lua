@@ -3,11 +3,8 @@ return {
   event = 'VeryLazy',
   opts = {
     options = {
-      icons_enabled = true,
-      theme = 'auto',
       component_separators = { left = ' ', right = ' ' },
       section_separators = { left = ' ', right = ' ' },
-      globalstatus = true,
     },
     sections = {
       lualine_a = {
@@ -22,22 +19,8 @@ return {
         { 'filename', padding = { left = 1 } },
       },
       lualine_x = {},
-      lualine_y = { 'progress', 'location' },
-      lualine_z = {
-        {
-          function()
-            return '  ' .. os.date '%X' .. ' 👾'
-          end,
-          color = {
-            bg = '',
-            fg = 'grey',
-          },
-        },
-      },
+      lualine_y = { 'progress' },
+      lualine_z = { 'location' },
     },
-    tabline = {},
-    winbar = {},
-    inactive_winbar = {},
-    extensions = {},
   },
 }

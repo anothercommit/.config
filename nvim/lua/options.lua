@@ -7,7 +7,6 @@ o.writebackup = false
 o.swapfile = false
 
 -- que cuando hay un comentario, 'o' u 'O' no continue comentando
--- vim.cmd 'formatoptions-=r'
 vim.api.nvim_create_autocmd('FileType', {
   pattern = '*',
   callback = function()

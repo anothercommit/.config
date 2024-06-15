@@ -4,10 +4,6 @@ return {
   },
   {
     'nyoom-engineering/oxocarbon.nvim',
-    priority = 1000,
-    init = function()
-      vim.cmd.colorscheme 'oxocarbon'
-    end,
   },
   {
     'tiagovla/tokyodark.nvim',
@@ -23,6 +19,10 @@ return {
   },
   {
     'Yazeed1s/minimal.nvim',
+    priority = 1000,
+    init = function()
+      vim.cmd.colorscheme 'oxocarbon'
+    end,
   },
   {
     'neanias/everforest-nvim',
@@ -48,9 +48,13 @@ return {
   },
   {
     'AlexvZyl/nordic.nvim',
-    -- config = function()
-    --   require('nordic').load()
+    priority = 1000,
+    -- init = function()
+    --   vim.cmd.colorscheme 'oxocarbon'
     -- end,
+    config = function()
+      require('nordic').load()
+    end,
   },
   {
     'akinsho/horizon.nvim',

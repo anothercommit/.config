@@ -15,10 +15,11 @@ keymap({ 'n', 'v' }, [[<leader>y]], [["+y]], { desc = 'Yank to clipboard', norem
 
 -- guardar con backspace
 keymap('n', '<BS>', '<cmd>:w<cr>', { noremap = 'true' })
+keymap('n', '<leader><cr>', '<cmd>vsplit term://zsh<cr>', { noremap = 'true' })
 
 -- <esc>
 keymap('v', '<BS>', '<esc>', { noremap = 'true' })
-keymap('i', 'jk', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
+keymap({ 'i', 't' }, 'jk', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
 keymap('n', '<esc>', [[<cmd>nohlsearch<cr>]], { noremap = 'true' })
 
 -- mover lineas
