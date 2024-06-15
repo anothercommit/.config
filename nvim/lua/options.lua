@@ -6,6 +6,15 @@ o.termguicolors = true
 o.writebackup = false
 o.swapfile = false
 
+-- que cuando hay un comentario, 'o' u 'O' no continue comentando
+-- vim.cmd 'formatoptions-=r'
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = '*',
+  callback = function()
+    vim.opt_local.formatoptions:remove { 'o' }
+  end,
+})
+
 o.number = true
 o.relativenumber = true
 
@@ -23,9 +32,9 @@ o.expandtab = true
 o.breakindent = true
 
 -- Save undo history
-if vim.loop.os_uname().sysname ~= 'Darwin' then
-  o.undofile = true
-end
+-- if vim.loop.os_uname().sysname ~= 'Darwin' then
+o.undofile = true
+-- end
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 o.ignorecase = true
@@ -38,7 +47,7 @@ o.foldmethod = 'marker'
 o.foldlevel = 0
 
 -- el espacio a la izquierda
-o.signcolumn = 'no'
+o.signcolumn = 'yes'
 
 -- Decrease update time
 o.updatetime = 250
