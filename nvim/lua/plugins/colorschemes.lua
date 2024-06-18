@@ -4,6 +4,9 @@ return {
   },
   {
     'nyoom-engineering/oxocarbon.nvim',
+
+    -- Copiar y pegar esto en el tema a usar
+    lazy = false,
     priority = 1000,
     init = function()
       vim.cmd.colorscheme 'oxocarbon'
@@ -42,27 +45,17 @@ return {
   },
   {
     'ribru17/bamboo.nvim',
-    config = function()
-      require('bamboo').load()
-    end,
+    -- config = function()
+    --   require('bamboo').load()
+    -- end,
   },
   {
     'AlexvZyl/nordic.nvim',
-    config = function()
-      require('nordic').load()
-    end,
+    -- config = function()
+    --   require('nordic').load()
+    -- end,
   },
   {
     'akinsho/horizon.nvim',
-<<<<<<< HEAD
-
-    -- Cortar y pegar esto en el tema a usar
-    lazy = false,
-    priority = 1000,
-    init = function()
-      vim.cmd.colorscheme 'horizon'
-    end,
-=======
->>>>>>> 4f4420f0bb958f68b5524a6e91644a28c7d3cec3
   },
 }
