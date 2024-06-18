@@ -10,7 +10,7 @@ return {
     'zootedb0t/citruszest.nvim',
     'EdenEast/nightfox.nvim',
     'akinsho/horizon.nvim',
-    'sainnhe/sonokai',
+    'AlexvZyl/nordic.nvim',
 
     'olimorris/onedarkpro.nvim',
     -- :OnedarkproExportToKitty (puede exportar el colorscheme a kitty)
@@ -23,7 +23,7 @@ return {
   {
     'navarasu/onedark.nvim',
     opts = {
-      style = 'dark', -- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'
+      style = 'warmer', -- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'
     },
     -- config = function()
     --   require('onedark').load()
@@ -33,24 +33,25 @@ return {
   {
     'tiagovla/tokyodark.nvim',
     opts = {
-      transparent_background = false,
+      transparent_background = true,
     },
   },
   {
     'comfysage/evergarden',
     opts = {
-      transparent_background = false,
+      transparent_background = true,
       contrast_dark = 'hard', -- 'hard'|'medium'|'soft'
     },
   },
   {
-    'AlexvZyl/nordic.nvim',
+    'sainnhe/sonokai',
+    lazy = false,
     priority = 1000,
-    -- init = function()
-    --   vim.cmd.colorscheme 'oxocarbon'
-    -- end,
-    config = function()
-      require('nordic').load()
+    init = function()
+      vim.cmd.colorscheme 'sonokai'
     end,
+    -- config = function()
+    --   require('nordic').load()
+    -- end,
   },
 }
