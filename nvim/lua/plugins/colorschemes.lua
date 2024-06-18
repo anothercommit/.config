@@ -21,16 +21,6 @@ return {
     -- end,
   },
   {
-<<<<<<< HEAD
-    'nyoom-engineering/oxocarbon.nvim',
-
-    -- Copiar y pegar esto en el tema a usar
-    lazy = false,
-    priority = 1000,
-    init = function()
-      vim.cmd.colorscheme 'oxocarbon'
-    end,
-=======
     'navarasu/onedark.nvim',
     opts = {
       style = 'warmer', -- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'
@@ -38,7 +28,6 @@ return {
     -- config = function()
     --   require('onedark').load()
     -- end,
->>>>>>> 13b5e8508bd30cdfd2b46bed536f2cdfcc7b3f49
   },
   { 'catppuccin/nvim', name = 'catppuccin' },
   {
@@ -55,21 +44,6 @@ return {
     },
   },
   {
-<<<<<<< HEAD
-    'ribru17/bamboo.nvim',
-    -- config = function()
-    --   require('bamboo').load()
-    -- end,
-  },
-  {
-    'AlexvZyl/nordic.nvim',
-    -- config = function()
-    --   require('nordic').load()
-    -- end,
-  },
-  {
-    'akinsho/horizon.nvim',
-=======
     'sainnhe/sonokai',
     lazy = false,
     priority = 1000,
@@ -79,6 +53,5 @@ return {
     -- config = function()
     --   require('nordic').load()
     -- end,
->>>>>>> 13b5e8508bd30cdfd2b46bed536f2cdfcc7b3f49
   },
 }
