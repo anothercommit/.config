@@ -81,7 +81,9 @@ return {
         },
       },
       bashls = {},
-      emmet_ls = {},
+      emmet_language_server = {},
+      cssls = {},
+      tailwindcss = {},
       tsserver = {},
       lua_ls = {
         settings = {
@@ -102,6 +104,7 @@ return {
       'bashls',
       'stylua',
       'emmet_language_server',
+      'cssls',
       'clangd',
       'pylsp',
       'rust_analyzer',
