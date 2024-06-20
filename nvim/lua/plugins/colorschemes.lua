@@ -1,5 +1,6 @@
 return {
   {
+    'projekt0n/github-nvim-theme',
     'folke/tokyonight.nvim',
     'nyoom-engineering/oxocarbon.nvim',
     'dgox16/oldworld.nvim',
