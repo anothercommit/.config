@@ -20,7 +20,7 @@ alt + shift + e
     thunar
 
 alt + shift + {b,o}
-    {chromium,obsidian}
+    {google-chrome-stable,obsidian}
 
 alt + shift + p
     kitty -e nvim '/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Palabras, inglés.md'
