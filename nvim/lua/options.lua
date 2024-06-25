@@ -51,7 +51,7 @@ o.foldmethod = 'marker'
 o.foldlevel = 0
 
 -- el espacio a la izquierda
-o.signcolumn = 'yes'
+-- o.signcolumn = 'no'
 
 -- Decrease update time
 o.updatetime = 250
