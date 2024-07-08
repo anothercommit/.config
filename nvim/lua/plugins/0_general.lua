@@ -1,6 +1,7 @@
 return {
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'onsails/lspkind.nvim',
+  -- Lua
   {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
