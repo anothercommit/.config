@@ -3,6 +3,11 @@ return {
   'onsails/lspkind.nvim',
   -- Lua
   {
+    'shortcuts/no-neck-pain.nvim',
+    version = '*',
+    cmd = 'NoNeckPain',
+  },
+  {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
     config = true,
