@@ -20,7 +20,7 @@ else
   export EDITOR='nvim'
 fi
 
-export PATH="´~/.local/bin:$PATH"
+export PATH=$PATH:~/.local/bin
 
 # Functions {{{
 mkcd ()
@@ -48,6 +48,7 @@ bindkey -s '^o' 'lfcd\n'
 # Aliases {{{
 
 alias py='python'
+alias g++f='g++ -std=gnu++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG'
 
 # Basic aliases
 alias ..='cd ..'
@@ -98,8 +99,12 @@ alias comandos='bat "/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Informática/Com
 eval "$(zoxide init zsh)"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
+    sed -i '' '$d' ~/.config/kitty/kitty.conf
+    echo "font_size 20" >> ~/.config/kitty/kitty.conf 
     source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    sed -i '' '$d' ~/.config/kitty/kitty.conf
+    echo "font_size 16" >> ~/.config/kitty/kitty.conf 
     source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
