@@ -59,7 +59,7 @@ alias l='ls --color'
 alias la='ls --color --almost-all'
 
 # Files
-alias zshedit='nvim ~/.zshrc'
+alias zshedit='nvim ~/.config/zsh/zshrc'
 alias zshsource='source ~/.zshrc'
 
 # CLI aliases
