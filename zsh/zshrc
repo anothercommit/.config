@@ -47,6 +47,8 @@ bindkey -s '^o' 'lfcd\n'
 
 # Aliases {{{
 
+alias wifi='nmcli device wifi'
+
 alias py='python'
 alias g++f='g++ -std=gnu++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG'
 
