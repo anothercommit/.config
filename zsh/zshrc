@@ -99,12 +99,17 @@ alias comandos='bat "/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Informática/Com
 eval "$(zoxide init zsh)"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
+    # deletes file's last line
     sed -i '' '$d' ~/.config/kitty/kitty.conf
     echo "font_size 20" >> ~/.config/kitty/kitty.conf 
+
     source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    sed -i '' '$d' ~/.config/kitty/kitty.conf
+
+    # deletes file's last line
+    sed -i '$d' ~/.config/kitty/kitty.conf
     echo "font_size 16" >> ~/.config/kitty/kitty.conf 
+
     source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
