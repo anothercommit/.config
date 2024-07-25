@@ -14,12 +14,7 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
-else
-  export EDITOR='nvim'
-fi
-
+export EDITOR='nvim'
 export PATH=$PATH:~/.local/bin
 
 # Functions {{{

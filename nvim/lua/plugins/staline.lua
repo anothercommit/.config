@@ -15,7 +15,7 @@ return {
       true_colors = true, -- true lsp colors.
       font_active = 'none', -- "none", "bold", "italic", "bold,italic", etc
 
-      mod_symbol = ' !',
+      mod_symbol = ' +',
       branch_symbol = ' ',
     },
     -- los colores sugeridos son re lindos, sino los por defecto son segun el colorscheme
