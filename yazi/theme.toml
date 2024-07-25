@@ -1,1 +1,2 @@
-# [flavor]
+[flavor]
+use = "gruvbox-dark"
