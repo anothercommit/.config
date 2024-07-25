@@ -1,18 +1,18 @@
 /*
 
-!picom/
+.DS_Store
 
 !nvim/
 nvim/lazy-lock.json
 
-!lf/
-!ly/
-!awesome/
-
 !alacritty/
 alacritty/font_size.toml
-
 !kitty/
+kitty/font_size.conf
+
+!picom/
+!ly/
+!awesome/
 !zsh/
 !rofi/
 !redshift/
@@ -20,7 +20,8 @@ alacritty/font_size.toml
 !betterlockscreen/
 !keyd
 !sxhkd/
-!starship.toml
+!yazi/
+!xinit/
 
 !.gitmodules
 !.gitignore

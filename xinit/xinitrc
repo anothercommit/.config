@@ -1,0 +1,10 @@
+#!/bin/sh
+
+redshift &
+nitrogen --set-zoom-fill --random /home/joaco/Media/Imagenes/wallpapers/general &
+exec awesome &
+picom &
+udiskie &
+dunst &
+copyq &
+xss-lock betterlockscreen -l dim

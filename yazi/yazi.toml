@@ -1,0 +1,5 @@
+[manager]
+ratio = [2, 4, 4]
+
+[preview]
+image_quality = 50

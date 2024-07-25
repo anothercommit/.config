@@ -28,18 +28,18 @@ mkcd ()
   mkdir -p -- "$1" && cd -P -- "$1"
 }
 
-rmthis() {
-    local current_dir=$(pwd)
-    cd .. && rm -rv "$current_dir"
-}
+# rmthis ()
+# {
+#   cd '..' -p && rm -rf -P -- "$1"
+# }
 
 function yy() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-  yazi "$@" --cwd-file="$tmp"
-  if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-	  cd -- "$cwd"
-  fi
-  rm -f -- "$tmp"
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
 }
 
 bindkey -s '^o' 'yy\n'
@@ -48,9 +48,6 @@ bindkey -s '^o' 'yy\n'
 # Aliases {{{
 
 alias wifi='nmcli device wifi'
-alias datos='nmcli device wifi connect Joaco password joacojoaco'
-
-alias reboot='systemctl reboot'
 
 alias py='python'
 alias g++f='g++ -std=gnu++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG'
@@ -104,8 +101,17 @@ alias comandos='bat "/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Informática/Com
 eval "$(zoxide init zsh)"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
+    # deletes file's last line
+    sed -i '' '$d' ~/.config/kitty/kitty.conf
+    echo "font_size 20" >> ~/.config/kitty/kitty.conf 
+
     source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+
+    # deletes file's last line
+    sed -i '$d' ~/.config/kitty/kitty.conf
+    echo "font_size 16" >> ~/.config/kitty/kitty.conf 
+
     source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
