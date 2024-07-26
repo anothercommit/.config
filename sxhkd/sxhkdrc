@@ -19,6 +19,9 @@ super + Return
 alt + shift + e
     thunar
 
+alt + shift + space
+    kitty -e yazi
+
 alt + shift + {b,o}
     {google-chrome-stable,obsidian}
 
