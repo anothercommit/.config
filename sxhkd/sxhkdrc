@@ -12,6 +12,9 @@ XF86Audio{Mute,RaiseVolume,LowerVolume}
 shift + XF86Audio{RaiseVolume,LowerVolume}
     dunstvol {UP,DOWN}
 
+alt + b
+    dunstbateria
+
 # run
 super + Return
     kitty
