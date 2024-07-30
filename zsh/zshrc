@@ -100,6 +100,7 @@ eval "$(zoxide init zsh)"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
+    source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
