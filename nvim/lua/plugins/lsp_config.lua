@@ -25,6 +25,7 @@ return {
       'cssls',
       'tsserver',
       'prettier',
+      'tailwindcss',
 
       'clangd',
       'clang-format',
@@ -39,7 +40,6 @@ return {
     local servers = {
       -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
       clangd = {},
-      rust_analyzer = {},
       pylsp = {
         settings = {
           pylsp = {
@@ -48,10 +48,10 @@ return {
         },
       },
       bashls = {},
-      emmet_language_server = {},
+      tsserver = {},
       cssls = {},
       tailwindcss = {},
-      tsserver = {},
+      emmet_language_server = {},
       lua_ls = {
         settings = {
           Lua = {
