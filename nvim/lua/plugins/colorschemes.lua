@@ -6,7 +6,6 @@ return {
     'dgox16/oldworld.nvim',
     'Yazeed1s/oh-lucy.nvim',
     'Yazeed1s/minimal.nvim',
-    'neanias/everforest-nvim',
     'olivercederborg/poimandres.nvim',
     'zootedb0t/citruszest.nvim',
     'EdenEast/nightfox.nvim',
@@ -30,6 +29,16 @@ return {
     --   require('onedark').load()
     -- end,
   },
+  {
+    'neanias/everforest-nvim',
+    -- version = false,
+    -- lazy = false,
+    -- priority = 1000,
+    opts = {
+      background = 'hard', -- soft, medium, hard
+      ui_contrast = 'low', -- low, high
+    },
+  },
   { 'catppuccin/nvim', name = 'catppuccin' },
   {
     'tiagovla/tokyodark.nvim',
@@ -40,8 +49,8 @@ return {
   {
     'comfysage/evergarden',
     opts = {
-      transparent_background = true,
-      contrast_dark = 'hard', -- 'hard'|'medium'|'soft'
+      transparent_background = false,
+      contrast_dark = 'medium', -- 'hard'|'medium'|'soft'
     },
   },
   {
