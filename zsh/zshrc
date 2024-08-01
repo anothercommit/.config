@@ -15,7 +15,7 @@ compinit
 _comp_options+=(globdots)
 
 export EDITOR='nvim'
-export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.local/bin/my-scripts/
 
 # Functions {{{
 mkcd ()
