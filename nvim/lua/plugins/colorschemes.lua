@@ -34,10 +34,12 @@ return {
     -- version = false,
     -- lazy = false,
     -- priority = 1000,
-    opts = {
-      background = 'hard', -- soft, medium, hard
-      ui_contrast = 'low', -- low, high
-    },
+    config = function()
+      require('everforest').setup {
+        background = 'hard', -- soft, medium, hard
+        ui_contrast = 'low', -- low, high
+      }
+    end,
   },
   { 'catppuccin/nvim', name = 'catppuccin' },
   {
