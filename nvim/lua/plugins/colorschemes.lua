@@ -10,7 +10,6 @@ return {
     'zootedb0t/citruszest.nvim',
     'EdenEast/nightfox.nvim',
     'akinsho/horizon.nvim',
-    'AlexvZyl/nordic.nvim',
 
     'olimorris/onedarkpro.nvim',
     -- :OnedarkproExportToKitty (puede exportar el colorscheme a kitty)
@@ -18,6 +17,12 @@ return {
     'ribru17/bamboo.nvim',
     -- config = function()
     --   require('bamboo').load()
+    -- end,
+  },
+  {
+    'AlexvZyl/nordic.nvim',
+    -- config = function()
+    --   require('nordic').load()
     -- end,
   },
   {
@@ -31,9 +36,6 @@ return {
   },
   {
     'neanias/everforest-nvim',
-    -- version = false,
-    -- lazy = false,
-    -- priority = 1000,
     config = function()
       require('everforest').setup {
         background = 'hard', -- soft, medium, hard
@@ -50,20 +52,17 @@ return {
   },
   {
     'comfysage/evergarden',
+    lazy = false,
+    priority = 1000,
+    init = function()
+      vim.cmd.colorscheme 'evergarden'
+    end,
     opts = {
-      transparent_background = false,
+      transparent_background = true,
       contrast_dark = 'medium', -- 'hard'|'medium'|'soft'
     },
   },
   {
     'sainnhe/sonokai',
-    lazy = false,
-    priority = 1000,
-    init = function()
-      vim.cmd.colorscheme 'sonokai'
-    end,
-    -- config = function()
-    --   require('nordic').load()
-    -- end,
   },
 }
