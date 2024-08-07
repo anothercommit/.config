@@ -29,6 +29,7 @@ return {
     'navarasu/onedark.nvim',
     opts = {
       style = 'warmer', -- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'
+      transparent_background = true,
     },
     -- config = function()
     --   require('onedark').load()
