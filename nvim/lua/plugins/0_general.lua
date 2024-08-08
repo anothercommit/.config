@@ -1,6 +1,7 @@
 return {
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'onsails/lspkind.nvim',
+  'xiyaowong/transparent.nvim',
   -- Lua
   {
     'shortcuts/no-neck-pain.nvim',
