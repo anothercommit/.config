@@ -3,7 +3,7 @@
 .DS_Store
 
 !nvim/
-nvim/lazy-lock.json
+./nvim/lazy-lock.json
 
 !alacritty/
 alacritty/font_size.toml
