@@ -20,6 +20,12 @@ return {
     -- end,
   },
   {
+    'Mofiqul/dracula.nvim',
+    opts = {
+      transparent_bg = true,
+    },
+  },
+  {
     'AlexvZyl/nordic.nvim',
     -- config = function()
     --   require('nordic').load()
