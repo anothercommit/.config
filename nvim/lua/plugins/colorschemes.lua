@@ -46,8 +46,13 @@ return {
     config = function()
       require('everforest').setup {
         background = 'hard', -- soft, medium, hard
-        ui_contrast = 'low', -- low, high
+        ui_contrast = 'high', -- low, high
       }
+    end,
+    lazy = false,
+    priority = 1000,
+    init = function()
+      vim.cmd.colorscheme 'evergarden'
     end,
   },
   { 'catppuccin/nvim', name = 'catppuccin' },
@@ -59,11 +64,6 @@ return {
   },
   {
     'comfysage/evergarden',
-    lazy = false,
-    priority = 1000,
-    init = function()
-      vim.cmd.colorscheme 'evergarden'
-    end,
     opts = {
       transparent_background = true,
       contrast_dark = 'medium', -- 'hard'|'medium'|'soft'
