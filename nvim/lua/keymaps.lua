@@ -21,6 +21,7 @@ keymap('n', '<leader><cr>', '<cmd>vsplit term://zsh<cr>', { noremap = 'true' })
 -- <esc>
 keymap('v', '<BS>', '<esc>', { noremap = 'true' })
 keymap({ 'i', 't' }, 'jk', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
+keymap({ 'i', 't' }, 'JK', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
 keymap('n', '<esc>', [[<cmd>nohlsearch<cr>]], { noremap = 'true' })
 
 -- mover lineas

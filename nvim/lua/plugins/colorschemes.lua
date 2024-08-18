@@ -17,7 +17,7 @@ return {
       transparent_bg = false,
     },
 
-    init = function()
+    config = function()
       vim.cmd 'colorscheme terafox'
     end,
   },
