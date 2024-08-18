@@ -97,6 +97,7 @@ alias comandos='bat "/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Informática/Com
 # }}}
 
 eval "$(zoxide init zsh)"
+source <(fzf --zsh)
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
