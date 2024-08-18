@@ -10,6 +10,16 @@ return {
   },
   {
     'EdenEast/nightfox.nvim',
+    lazy = false,
+    priority = 1000,
+
+    opts = {
+      transparent_bg = false,
+    },
+
+    init = function()
+      vim.cmd 'colorscheme terafox'
+    end,
   },
   {
     'Mofiqul/dracula.nvim',
@@ -42,8 +52,6 @@ return {
       transparent_background = false,
       contrast_dark = 'hard', -- 'hard'|'medium'|'soft'
     },
-    lazy = false,
-    priority = 1000,
   },
   {
     'sainnhe/sonokai',
