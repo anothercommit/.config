@@ -28,7 +28,7 @@ o.rtp:prepend(lazypath)
 require('lazy').setup({
   -- Use `opts = {}` to force a plugin to be loaded.
   --  This is equivalent to:
-  --    require('Comment').setup({})
+  --    require('some_plugin').setup({})
   { import = 'plugins' },
 }, {
   ui = {

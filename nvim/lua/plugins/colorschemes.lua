@@ -1,5 +1,7 @@
 return {
   {
+    'sainnhe/sonokai',
+    'Mofiqul/dracula.nvim',
     'folke/tokyonight.nvim',
     'nyoom-engineering/oxocarbon.nvim',
     'Yazeed1s/minimal.nvim',
@@ -8,24 +10,42 @@ return {
     'olimorris/onedarkpro.nvim',
     -- :OnedarkproExportToKitty (puede exportar el colorscheme a kitty)
   },
+  { 'catppuccin/nvim', name = 'catppuccin' },
+  {
+    'AlexvZyl/nordic.nvim',
+    -- lazy = false,
+    -- priority = 1000,
+
+    -- config = function()
+    --   vim.cmd 'colorscheme nordic'
+    -- end,
+  },
   {
     'EdenEast/nightfox.nvim',
     lazy = false,
     priority = 1000,
 
-    opts = {
-      transparent_bg = false,
-    },
-
     config = function()
-      vim.cmd 'colorscheme terafox'
+      require('nightfox').setup {
+        palettes = {
+          nordfox = {
+            -- A palette also defines the following:
+            --   bg0, bg1, bg2, bg3, bg4, fg0, fg1, fg2, fg3, sel0, sel1, comment
+            --
+            -- These are the different foreground and background shades used by the theme.
+            -- The base bg and fg is 1, 0 is normally the dark alternative. The others are
+            -- incrementally lighter versions.
+            -- bg0 = '#1e2340',
+            bg1 = '#1d2029',
+
+            sel0 = '#3e4a5b', -- Popup bg, visual selection bg
+            sel1 = '#4f6074', -- Popup sel bg, search bg
+          },
+        },
+      }
+
+      vim.cmd 'colorscheme nordfox'
     end,
-  },
-  {
-    'Mofiqul/dracula.nvim',
-    opts = {
-      transparent_bg = false,
-    },
   },
   {
     'navarasu/onedark.nvim',
@@ -41,7 +61,6 @@ return {
       ui_contrast = 'high', -- low, high
     },
   },
-  { 'catppuccin/nvim', name = 'catppuccin' },
   {
     'tiagovla/tokyodark.nvim',
     opts = { transparent_background = false },
@@ -52,8 +71,5 @@ return {
       transparent_background = false,
       contrast_dark = 'hard', -- 'hard'|'medium'|'soft'
     },
-  },
-  {
-    'sainnhe/sonokai',
   },
 }
