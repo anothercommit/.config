@@ -98,7 +98,6 @@ o.termguicolors = true -- use 24bit colors in tui
 o.ttyfast = true -- let vim know that I am using a fast term
 o.virtualedit = 'block' -- allow cursor to move where there is no text in visual block mode
 o.visualbell = false -- stop beeping for non-error errors, please god
-o.wildmenu = true -- show options as list when switching buffers etc
 
 o.formatoptions = o.formatoptions -- :help fo-table
   + 'r' -- continue comment with enter
@@ -111,8 +110,8 @@ o.shortmess = o.shortmess
   + 'W' -- dont echo '[w]/[written]' when writing
   + 'a' -- use abbreviations in message '[ro]' instead of '[readonly]'
 
-o.wildmode = { -- shell-like autocomplete to unambiguous portions
-  'longest',
-  'list',
-  'full',
-}
+-- o.wildmode = { -- shell-like autocomplete to unambiguous portions
+--   'longest',
+--   'list',
+--   'full',
+-- }
