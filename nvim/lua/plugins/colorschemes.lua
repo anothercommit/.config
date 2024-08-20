@@ -1,6 +1,5 @@
 return {
   {
-    'sainnhe/sonokai',
     'Mofiqul/dracula.nvim',
     'folke/tokyonight.nvim',
     'nyoom-engineering/oxocarbon.nvim',
@@ -9,6 +8,14 @@ return {
     'akinsho/horizon.nvim',
     'olimorris/onedarkpro.nvim',
     -- :OnedarkproExportToKitty (puede exportar el colorscheme a kitty)
+  },
+  {
+    'sainnhe/sonokai',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd 'colorscheme sonokai'
+    end,
   },
   { 'catppuccin/nvim', name = 'catppuccin' },
   {
@@ -22,9 +29,6 @@ return {
   },
   {
     'EdenEast/nightfox.nvim',
-    lazy = false,
-    priority = 1000,
-
     config = function()
       require('nightfox').setup {
         palettes = {
@@ -35,16 +39,11 @@ return {
             -- These are the different foreground and background shades used by the theme.
             -- The base bg and fg is 1, 0 is normally the dark alternative. The others are
             -- incrementally lighter versions.
-            -- bg0 = '#1e2340',
+            bg0 = '#1e2340',
             bg1 = '#1d2029',
-
-            sel0 = '#3e4a5b', -- Popup bg, visual selection bg
-            sel1 = '#4f6074', -- Popup sel bg, search bg
           },
         },
       }
-
-      vim.cmd 'colorscheme nordfox'
     end,
   },
   {

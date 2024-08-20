@@ -11,14 +11,6 @@ vim.opt.laststatus = 3
 -- mostrar la tabline: 0 (nunca), 1 (+1 archivo), 2 (siempre)
 vim.opt.showtabline = 1
 
--- que cuando hay un comentario, 'o' u 'O' no continue comentando
--- vim.api.nvim_create_autocmd('FileType', {
---   pattern = '*',
---   callback = function()
---     vim.opt_local.formatoptions:remove { 'o' }
---   end,
--- })
-
 o.number = true
 o.relativenumber = true
 
@@ -99,19 +91,14 @@ o.ttyfast = true -- let vim know that I am using a fast term
 o.virtualedit = 'block' -- allow cursor to move where there is no text in visual block mode
 o.visualbell = false -- stop beeping for non-error errors, please god
 
+-- esto no funciona por alguna razon
 o.formatoptions = o.formatoptions -- :help fo-table
   + 'r' -- continue comment with enter
-  - 'o' -- but not w/ o and o, dont continue comments
   + 'n' -- smart auto indenting inside numbered lists
-  - '2' -- this is not grade school anymore
+  - '2' -- el 2 formatea teniendo en cuenta las sangrias
+  - 'o' -- que 'o' no continue un comentario
 
 o.shortmess = o.shortmess
   + 'A' -- ignore annoying swapfile messages
   + 'W' -- dont echo '[w]/[written]' when writing
   + 'a' -- use abbreviations in message '[ro]' instead of '[readonly]'
-
--- o.wildmode = { -- shell-like autocomplete to unambiguous portions
---   'longest',
---   'list',
---   'full',
--- }
