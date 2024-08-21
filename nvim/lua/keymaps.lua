@@ -15,6 +15,8 @@ keymap({ 'n', 'v' }, [[<leader>y]], [["+y]], { desc = 'Yank to clipboard', norem
 
 -- guardar con backspace
 keymap('n', '<BS>', '<cmd>:w<cr>', { noremap = 'true' })
+keymap('n', '<leader><BS>', '<cmd>:wqa<cr>', { noremap = 'true' })
+keymap('n', '<leader>q', '<cmd>:q<cr>', { noremap = 'true' })
 
 keymap('n', '<leader><cr>', '<cmd>vsplit term://zsh<cr>', { noremap = 'true' })
 
