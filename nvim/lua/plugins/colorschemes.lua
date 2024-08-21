@@ -14,18 +14,21 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
+      vim.g.sonokai_enable_italic = 1 -- true?
+      vim.g.sonokay_better_performance = 1 -- true?
+      -- 0, 1 or 2 (components like statusline background are transparent)
+      vim.g.sonokai_transparent_background = 0
+      vim.g.sonokay_syle = 'default' -- default, atlantis, andromeda, shusia, maia, espresso
+      vim.g.sonokai_colors_override = {
+        bg0 = { '#1b1c20', '235' },
+        bg2 = { '#191b20', '236' },
+      }
       vim.cmd 'colorscheme sonokai'
     end,
   },
   { 'catppuccin/nvim', name = 'catppuccin' },
   {
     'AlexvZyl/nordic.nvim',
-    -- lazy = false,
-    -- priority = 1000,
-
-    -- config = function()
-    --   vim.cmd 'colorscheme nordic'
-    -- end,
   },
   {
     'EdenEast/nightfox.nvim',
@@ -40,7 +43,8 @@ return {
             -- The base bg and fg is 1, 0 is normally the dark alternative. The others are
             -- incrementally lighter versions.
             bg0 = '#1e2340',
-            bg1 = '#1d2029',
+            -- bg1 = '#1d2029',
+            bg1 = '#18140d',
           },
         },
       }
