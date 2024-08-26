@@ -13,6 +13,7 @@ return { -- Autoformat
       lua = { 'stylua' },
       -- python = { 'ruff' },
       javascript = { 'prettier' },
+      javascriptreact = { 'prettier' },
       html = { 'prettier' },
       css = { 'prettier' },
     },
