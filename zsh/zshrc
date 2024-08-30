@@ -64,12 +64,13 @@ alias zshsource='source ~/.zshrc'
 
 # CLI aliases
 alias n='nvim'
-alias sn='sudo nvim'
-alias e='exa'
-alias ea='exa -a'
-alias el='exa -al'
-alias et='exa -T'
-alias elt='exa -alT'
+alias sn='sudoedit'
+
+alias l='eza --icons'
+alias la='eza --icons -a'
+alias ll='eza --icons -al'
+alias lt='eza --icons -T'
+
 alias tr='trash-put'
 alias trr='trash-restore'
 alias icat='kitty +kitten icat'
@@ -78,8 +79,7 @@ alias sp='sudo pacman'
 alias sp='sudo pacman'
 alias du='du -sh'
 alias df='df -h'
-alias sudodu='sudo du -sh'
-alias sudodf='sudo df -h'
+alias sdu='sudo du -sh'
 alias keysoup="sudo systemctl restart keyd"
 
 # Git aliases
