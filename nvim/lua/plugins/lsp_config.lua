@@ -29,6 +29,7 @@ return {
 
       'clangd',
       'clang-format',
+      'codelldb',
 
       'pylsp',
     })

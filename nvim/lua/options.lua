@@ -6,6 +6,8 @@ o.termguicolors = true
 o.writebackup = false
 o.swapfile = false
 
+-- el espacio a la izquierda
+o.signcolumn = 'yes'
 -- mostrar una status bar global al trabajar con splits
 vim.opt.laststatus = 3
 -- mostrar la tabline: 0 (nunca), 1 (+1 archivo), 2 (siempre)
@@ -39,9 +41,6 @@ o.wrap = false
 o.cmdheight = 0
 o.foldmethod = 'marker'
 o.foldlevel = 0
-
--- el espacio a la izquierda
-o.signcolumn = 'no'
 
 -- Decrease update time
 o.updatetime = 250
