@@ -58,13 +58,6 @@ return {
     },
   },
   {
-    'neanias/everforest-nvim',
-    opts = {
-      background = 'hard', -- soft, medium, hard
-      ui_contrast = 'high', -- low, high
-    },
-  },
-  {
     'tiagovla/tokyodark.nvim',
     opts = { transparent_background = false },
   },
