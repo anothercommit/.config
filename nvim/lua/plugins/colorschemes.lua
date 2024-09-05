@@ -11,19 +11,15 @@ return {
   },
   {
     'sainnhe/sonokai',
-    lazy = false,
-    priority = 1000,
     config = function()
       vim.g.sonokai_enable_italic = 1 -- true?
       vim.g.sonokay_better_performance = 1 -- true?
-      -- 0, 1 or 2 (components like statusline background are transparent)
-      vim.g.sonokai_transparent_background = 0
+      vim.g.sonokai_transparent_background = 1
       vim.g.sonokay_syle = 'default' -- default, atlantis, andromeda, shusia, maia, espresso
       vim.g.sonokai_colors_override = {
         bg0 = { '#1b1c20', '235' },
         bg2 = { '#191b20', '236' },
       }
-      vim.cmd 'colorscheme sonokai'
     end,
   },
   { 'catppuccin/nvim', name = 'catppuccin' },
@@ -54,17 +50,22 @@ return {
     'navarasu/onedark.nvim',
     opts = {
       style = 'warmer', -- dark, darker, cool, deep, warm, warmer, light
-      transparent_background = false,
+      transparent_background = true,
     },
   },
   {
     'tiagovla/tokyodark.nvim',
-    opts = { transparent_background = false },
+    lazy = false,
+    priority = 1000,
+    opts = { transparent_background = true },
+    config = function()
+      vim.cmd 'colorscheme sonokai'
+    end,
   },
   {
     'comfysage/evergarden',
     opts = {
-      transparent_background = false,
+      transparent_background = true,
       contrast_dark = 'hard', -- 'hard'|'medium'|'soft'
     },
   },
