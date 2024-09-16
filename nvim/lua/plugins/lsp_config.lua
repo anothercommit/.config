@@ -23,8 +23,9 @@ return {
 
       'emmet_language_server',
       'cssls',
-      'tsserver',
-      'prettier',
+      'ts_ls',
+      'denols',
+      'prettierd',
       'tailwindcss',
 
       'clangd',
@@ -49,9 +50,9 @@ return {
         },
       },
       bashls = {},
-      tsserver = {},
+      -- ts_ls = {},
       cssls = {},
-      tailwindcss = {},
+      -- tailwindcss = {},
       emmet_language_server = {},
       lua_ls = {
         settings = {
