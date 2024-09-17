@@ -23,7 +23,7 @@ return {
 
       'emmet_language_server',
       'cssls',
-      'ts_ls',
+      -- 'ts_ls',
       'denols',
       'prettierd',
       'tailwindcss',
