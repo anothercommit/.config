@@ -13,7 +13,7 @@ return { -- Autoformat
       lua = { 'stylua' },
       -- python = { 'ruff' },
       javascript = { 'deno_fmt' },
-      javascriptreact = { 'deno_fmt' },
+      javascriptreact = { 'deno_fmt --indent-width 4' },
       json = { 'deno_fmt' },
       html = { 'prettierd' },
       css = { 'prettierd' },
