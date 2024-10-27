@@ -1,3 +1,4 @@
+local diagnostic = require 'nightfox.group.modules.diagnostic'
 return {
   'neovim/nvim-lspconfig',
   dependencies = {
@@ -18,21 +19,14 @@ return {
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
       'bashls',
-
       'stylua',
-
-      'emmet_language_server',
+      'emmet-language-server',
       'cssls',
-      -- 'ts_ls',
       'denols',
-      'prettierd',
-      'tailwindcss',
-
       'clangd',
       'clang-format',
-      'codelldb',
-
-      'pylsp',
+      'ruff-lsp',
+      'pylyzer',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -42,28 +36,13 @@ return {
     local servers = {
       -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
       clangd = {},
-      pylsp = {
-        settings = {
-          pylsp = {
-            pylsp_mypy = { enabled = false },
-          },
-        },
-      },
+      denols = {},
       bashls = {},
-      -- ts_ls = {},
       cssls = {},
-      -- tailwindcss = {},
       emmet_language_server = {},
-      lua_ls = {
-        settings = {
-          Lua = {
-            completion = {
-              callSnippet = 'Replace',
-            },
-            diagnostics = { disable = { 'missing-fields' } },
-          },
-        },
-      },
+      lua_ls = {},
+      pylyzer = {},
+      ruff_lsp = {},
     }
 
     require('mason-lspconfig').setup {

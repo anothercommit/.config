@@ -11,7 +11,7 @@ return { -- Autoformat
     end,
     formatters_by_ft = {
       lua = { 'stylua' },
-      -- python = { 'ruff' },
+      python = { 'ruff_lsp' },
       javascript = { 'deno_fmt' },
       javascriptreact = { 'deno_fmt --indent-width 4' },
       json = { 'deno_fmt' },
