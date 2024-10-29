@@ -26,7 +26,7 @@ return {
       'clangd',
       'clang-format',
       'ruff-lsp',
-      'pylyzer',
+      'pyright',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -41,7 +41,19 @@ return {
       cssls = {},
       emmet_language_server = {},
       lua_ls = {},
-      pylyzer = {},
+      pyright = {
+        settings = {
+          pyright = {
+            disableOrganizeImports = true, -- Using Ruff
+          },
+          python = {
+            analysis = {
+              ignore = { '*' }, -- Using Ruff
+              -- typeCheckingMode = 'off', -- Using mypy
+            },
+          },
+        },
+      },
       ruff_lsp = {},
     }
 
