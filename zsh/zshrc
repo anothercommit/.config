@@ -81,6 +81,7 @@ alias du='du -sh'
 alias df='df -h'
 alias sdu='sudo du -sh'
 alias keysoup="sudo systemctl restart keyd"
+alias usefulfiles="yazi '/home/joaco/SecondBrain/1. Áreas 🛸/Informática/Archivos útiles'"
 
 # Git aliases
 alias g='git'
