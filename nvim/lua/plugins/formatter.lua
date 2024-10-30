@@ -19,7 +19,7 @@ return { -- Autoformat
       python = { 'ruff_lsp' },
       javascript = { 'prettierd' },
       javascriptreact = { 'prettierd' },
-      -- json = { 'deno_fmt' },
+      json = { 'deno_fmt' },
       html = { 'prettierd' },
       css = { 'prettierd' },
     },
