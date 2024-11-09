@@ -54,7 +54,7 @@ return {
           },
         },
       },
-      ruff_lsp = {},
+      ruff = {},
     }
 
     require('mason-lspconfig').setup {
