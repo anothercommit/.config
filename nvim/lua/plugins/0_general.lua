@@ -7,12 +7,6 @@ return {
     -- cmd = 'NoNeckPain',
   },
   {
-    'AlejandroSuero/freeze-code.nvim',
-    config = function()
-      require('freeze-code').setup()
-    end,
-  },
-  {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
     config = true,
