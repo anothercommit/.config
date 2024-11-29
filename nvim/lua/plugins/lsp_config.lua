@@ -23,6 +23,7 @@ return {
       'emmet-language-server',
       'cssls',
       'denols',
+      'prettierd',
       'clangd',
       'clang-format',
       'ruff-lsp',
