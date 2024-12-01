@@ -24,9 +24,10 @@ return {
       'cssls',
       'denols',
       'prettierd',
+      'html-lsp',
       'clangd',
       'clang-format',
-      'ruff-lsp',
+      'ruff',
       'pyright',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
@@ -41,6 +42,7 @@ return {
       bashls = {},
       cssls = {},
       emmet_language_server = {},
+      html = {},
       lua_ls = {},
       pyright = {
         settings = {

@@ -7,7 +7,6 @@ return { -- Highlight, edit, and navigate code
 
       'c',
       'cpp',
-      'rust',
 
       'lua',
       'luadoc',
@@ -18,7 +17,10 @@ return { -- Highlight, edit, and navigate code
 
       'html',
       'javascript',
+      'typescript',
       'css',
+      'json',
+      'sxhkdrc',
 
       'python',
     },
