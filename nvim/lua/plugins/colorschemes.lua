@@ -14,7 +14,7 @@ return {
     config = function()
       vim.g.sonokai_enable_italic = 1 -- true?
       vim.g.sonokay_better_performance = 1 -- true?
-      vim.g.sonokai_transparent_background = 0
+      vim.g.sonokai_transparent_background = 1
       vim.g.sonokay_syle = 'default' -- default, atlantis, andromeda, shusia, maia, espresso
       vim.g.sonokai_colors_override = {
         bg0 = { '#1b1c20', '235' },
