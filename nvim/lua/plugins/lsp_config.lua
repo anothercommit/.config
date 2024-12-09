@@ -26,7 +26,7 @@ return {
       'prettierd',
       'html-lsp',
       'clangd',
-      'clang-format',
+      -- 'clang-format',
       'ruff',
       'pyright',
     })
