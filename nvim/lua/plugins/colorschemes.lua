@@ -1,3 +1,5 @@
+local transparency = true
+
 return {
   {
     'Mofiqul/dracula.nvim',
@@ -14,7 +16,7 @@ return {
     config = function()
       vim.g.sonokai_enable_italic = 0 -- true?
       vim.g.sonokay_better_performance = 1 -- true?
-      vim.g.sonokai_transparent_background = 1
+      vim.g.sonokai_transparent_background = 0
       vim.g.sonokay_syle = 'default' -- default, atlantis, andromeda, shusia, maia, espresso
       vim.g.sonokai_colors_override = {
         bg0 = { '#1b1c20', '235' },
@@ -50,14 +52,14 @@ return {
     'navarasu/onedark.nvim',
     opts = {
       style = 'warmer', -- dark, darker, cool, deep, warm, warmer, light
-      transparent_background = true,
+      transparent_background = transparency,
     },
   },
   {
     'tiagovla/tokyodark.nvim',
     lazy = false,
     priority = 1000,
-    opts = { transparent_background = true },
+    opts = { transparent_background = transparency },
     config = function()
       vim.cmd 'colorscheme sonokai'
     end,
@@ -65,7 +67,7 @@ return {
   {
     'comfysage/evergarden',
     opts = {
-      transparent_background = true,
+      transparent_background = transparency,
       contrast_dark = 'hard', -- 'hard'|'medium'|'soft'
     },
   },
