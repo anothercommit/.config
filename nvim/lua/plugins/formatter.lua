@@ -9,7 +9,8 @@ return { -- Autoformat
     },
 
     format_after_save = function(bufnr)
-      local disable_filetypes = { cpp = 'cpp' }
+      local disable_filetypes = { --[[ cpp = 'cpp' ]]
+      }
       return {
         timeout_ms = 1000,
         lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
