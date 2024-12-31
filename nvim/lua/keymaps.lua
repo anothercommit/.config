@@ -60,11 +60,12 @@ kmset('n', '<leader><cr>', function()
   vim.cmd.vnew()
   vim.cmd.term()
   vim.cmd.wincmd 'J'
+  vim.api.nvim_win_set_height(0, 5)
 
   term_id = vim.bo.channel
 end)
 
-kmset('n', '<leader><s-cr>', function()
+kmset('n', '<leader>m', function()
   vim.fn.chansend(term_id, { 'make\r\n' })
 end)
 

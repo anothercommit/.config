@@ -3,10 +3,6 @@ return {
   'onsails/lspkind.nvim',
   -- 'xiyaowong/transparent.nvim',
   {
-    'shortcuts/no-neck-pain.nvim',
-    -- cmd = 'NoNeckPain',
-  },
-  {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
     config = true,
