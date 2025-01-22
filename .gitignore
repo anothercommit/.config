@@ -8,7 +8,7 @@
 !alacritty/
 alacritty/font_size.toml
 !kitty/
-kitty/font_things.conf
+kitty/font_settings.conf
 
 !picom/
 !ly/
