@@ -61,8 +61,6 @@ o.list = true
 -- Preview substitutions live, as you type!
 o.inccommand = 'split'
 
--- Show which line your cursor is on
-o.cursorline = true
 o.scrolloff = 10
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
