@@ -4,16 +4,33 @@ vim.g.maplocalleader = ' '
 require 'options'
 require 'keymaps'
 
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-
--- Diagnostic keymaps
-
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
   callback = function()
     vim.highlight.on_yank()
+  end,
+})
+
+-- Save and load folds
+vim.api.nvim_create_autocmd('BufWinLeave', {
+  desc = 'Save folds to buffer',
+  pattern = '*',
+  callback = function()
+    if vim.fn.bufname '%' ~= '' then
+      vim.cmd 'mkview'
+    end
+  end,
+})
+
+vim.api.nvim_create_autocmd('BufWinEnter', {
+  desc = 'Load folds to buffer',
+  pattern = '*',
+  callback = function()
+    if vim.fn.bufname '%' ~= '' then
+      vim.cmd 'silent! loadview'
+    end
   end,
 })
 

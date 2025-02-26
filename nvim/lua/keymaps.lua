@@ -4,6 +4,9 @@
 local kmset = vim.keymap.set
 
 kmset('n', 'x', [["_x]], { noremap = 'true' })
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+kmset({ 'n', 'v' }, '<leader>f', 'zf', { noremap = 'true', desc = '[f]old' })
 
 kmset('n', '<C-d>', [[<C-d>zz]], { noremap = 'true' })
 kmset('n', '<C-u>', [[<C-u>zz]], { noremap = 'true' })
@@ -48,25 +51,35 @@ kmset('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 kmset('n', '<leader>;', 'gt', { desc = 'move next tab' })
 kmset('n', '<leader>a', 'gT', { desc = 'move previos tab' })
-kmset('n', '<leader-;>', 'gt', { desc = 'move next tab' })
-kmset('n', '<leader-a>', 'gT', { desc = 'move previos tab' })
 
 -- Oil
 kmset('n', '<leader>o', '<cmd>Oil<cr>', { desc = '[O]il' })
 
 -- Terminal
-
-kmset('n', '<leader><cr>', function()
+local function open_terminal()
   vim.cmd.vnew()
   vim.cmd.term()
   vim.cmd.wincmd 'J'
-  vim.api.nvim_win_set_height(0, 5)
+  vim.api.nvim_win_set_height(0, 7)
 
   term_id = vim.bo.channel
-end)
+end
+
+kmset('n', '<leader><cr>', open_terminal)
 
 kmset('n', '<leader>m', function()
-  vim.fn.chansend(term_id, { 'make\r\n' })
+  local f, _ = io.open('makefile', 'r')
+  if f then
+    open_terminal()
+    vim.fn.chansend(term_id, { 'make\r\n' })
+    vim.cmd 'tabnew'
+  else
+    local filename = vim.fn.expand '%:t'
+    vim.cmd 'tabnew'
+    open_terminal()
+    vim.fn.chansend(term_id, { 'makefile.py ' .. filename .. '\r\n' })
+    vim.fn.chansend(term_id, { 'make\r\n' })
+  end
 end)
 
 kmset('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })

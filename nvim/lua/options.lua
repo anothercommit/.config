@@ -40,8 +40,7 @@ o.showmatch = true -- show matching parenthesis on cursor hover
 o.background = 'dark'
 o.wrap = false
 o.cmdheight = 0
-o.foldmethod = 'marker'
-o.foldlevel = 0
+o.foldmethod = 'manual'
 
 -- Decrease update time
 o.updatetime = 250

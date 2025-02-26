@@ -16,6 +16,7 @@ _comp_options+=(globdots)
 
 export EDITOR='nvim'
 export PATH=$PATH:~/.local/bin/my-scripts/
+export PATH=$PATH:~/Dev/CP-contests/parser/
 
 # Functions {{{
 mkcd ()

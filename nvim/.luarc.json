@@ -1,6 +1,7 @@
 {
     "diagnostics.globals": [
         "o",
-        "g"
+        "g",
+        "term_id"
     ]
 }
