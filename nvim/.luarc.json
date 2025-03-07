@@ -2,6 +2,7 @@
     "diagnostics.globals": [
         "o",
         "g",
-        "term_id"
+        "term_id",
+        "vim"
     ]
 }

@@ -22,7 +22,7 @@ return {
       'stylua',
       'emmet-language-server',
       'cssls',
-      'denols',
+      'biome',
       'prettierd',
       'html-lsp',
       'clangd',
