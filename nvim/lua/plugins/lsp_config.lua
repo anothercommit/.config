@@ -29,8 +29,7 @@ return {
       -- 'clang-format',
       'ruff',
       'pyright',
-
-      'hls',
+      'haskell-language-server',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
