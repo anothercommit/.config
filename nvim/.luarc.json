@@ -4,5 +4,8 @@
         "g",
         "term_id",
         "vim"
+    ],
+    "diagnostics.disable": [
+        "missing-fields"
     ]
 }

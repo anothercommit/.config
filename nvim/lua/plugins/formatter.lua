@@ -2,11 +2,7 @@ return { -- Autoformat
   'stevearc/conform.nvim',
   opts = {
     notify_on_error = true,
-    formatters = {
-      deno_fmt = {
-        command = 'deno fmt',
-      },
-    },
+    formatters = {},
 
     format_after_save = function(bufnr)
       local disable_filetypes = { cpp = 'cpp' }
@@ -27,6 +23,7 @@ return { -- Autoformat
       jsonc = { 'biome' },
       html = { 'prettierd' },
       css = { 'prettierd' },
+      haskell = { 'fourmolu' },
       -- cpp = { '' },
     },
   },

@@ -3,6 +3,7 @@
 
 local kmset = vim.keymap.set
 
+kmset('n', '<leader>q', ':q', { noremap = 'true' })
 kmset('n', 'x', [["_x]], { noremap = 'true' })
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
@@ -67,18 +68,28 @@ end
 
 kmset('n', '<leader><cr>', open_terminal)
 
-kmset('n', '<leader>m', function()
-  local f, _ = io.open('makefile', 'r')
-  if f then
-    open_terminal()
-    vim.fn.chansend(term_id, { 'make\r\n' })
-    vim.cmd 'tabnew'
+kmset('n', '<leader><s-cr>', function()
+  local filename = vim.fn.expand '%:t'
+
+  if filename:sub(-3) == 'cpp' then
+    local f, _ = io.open('makefile', 'r')
+
+    if f then
+      open_terminal()
+      vim.fn.chansend(term_id, { 'make\r\n' })
+      vim.cmd 'tabnew'
+    else
+      vim.cmd 'tabnew'
+      open_terminal()
+      vim.fn.chansend(term_id, { 'makefile.py ' .. filename .. '\r\n' })
+      vim.fn.chansend(term_id, { 'make\r\n' })
+    end
   else
-    local filename = vim.fn.expand '%:t'
-    vim.cmd 'tabnew'
-    open_terminal()
-    vim.fn.chansend(term_id, { 'makefile.py ' .. filename .. '\r\n' })
-    vim.fn.chansend(term_id, { 'make\r\n' })
+    if filename:sub(-2) == 'hs' then
+      open_terminal()
+      vim.fn.chansend(term_id, { 'ghci ' .. filename .. '\r\n' })
+      vim.cmd.wincmd 'J'
+    end
   end
 end)
 

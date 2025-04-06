@@ -18,18 +18,18 @@ return {
 
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
-      'bashls',
-      'stylua',
       'emmet-language-server',
       'cssls',
       'biome',
       'prettierd',
       'html-lsp',
+      'bashls',
+      'stylua',
       'clangd',
-      -- 'clang-format',
       'ruff',
       'pyright',
       'haskell-language-server',
+      'fourmolu',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
