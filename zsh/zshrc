@@ -56,7 +56,7 @@ alias g++f='g++ -std=gnu++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBC
 alias ..='cd ..'
 alias ...='cd ../..'
 alias rm='rm -v'
-alias cp='cp -v'
+# alias cp='cp -v'
 alias l='ls --color'
 alias la='ls --color --almost-all'
 
