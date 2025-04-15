@@ -24,6 +24,8 @@ return { -- Highlight, edit, and navigate code
 
       'python',
       'haskell',
+
+      'go',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,

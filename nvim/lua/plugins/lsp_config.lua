@@ -30,6 +30,7 @@ return {
       'pyright',
       'haskell-language-server',
       'fourmolu',
+      'gopls',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -43,6 +44,7 @@ return {
       cssls = {},
       emmet_language_server = {},
       hls = {},
+      gopls = {},
       html = {},
       lua_ls = {},
       pyright = {
