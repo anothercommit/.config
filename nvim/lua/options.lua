@@ -9,6 +9,8 @@ vim.api.nvim_create_autocmd('TermOpen', {
   end,
 })
 
+vim.diagnostic.config { jump = { float = true } }
+
 g.have_nerd_font = true
 o.termguicolors = true
 o.writebackup = false

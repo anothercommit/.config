@@ -37,10 +37,8 @@ kmset('v', '<A-k>', [[<cmd>m '<-2<cr>]], { desc = 'move line up', noremap = 'tru
 kmset('v', '>', [[>gv]], { desc = 'indent +1 tab', noremap = 'true' })
 kmset('v', '<', [[<gv]], { desc = 'indent -1 tab', noremap = 'true' })
 
-kmset('n', '<C-m>', '<cmd>nohlsearch<CR>', { noremap = 'true' })
+-- kmset('n', '<C-m>', '<cmd>nohlsearch<CR>', { noremap = 'true' })
 
-kmset('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
-kmset('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
 kmset('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 kmset('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
