@@ -10,6 +10,10 @@ alacritty/font_size.toml
 !kitty/
 kitty/font_settings.conf
 
+!streamrip/
+/streamrip/downloads.db
+/streamrip/failed_downloads.db
+
 !picom/
 !ly/
 !awesome/

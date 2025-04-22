@@ -34,7 +34,7 @@ return {
     sections = {
       left = { '- ', '-mode', 'left_sep_double', ' ', 'branch' },
       mid = { 'file_name' },
-      right = { 'filas -> %L ', 'right_sep_double', '-line_column' },
+      right = { 'right_sep_double', '-line_column', '-%L' },
     },
     inactive_sections = {
       left = { 'branch' },
