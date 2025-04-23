@@ -1,4 +1,4 @@
-local transparency = true
+local transparency = false
 
 return {
   {
@@ -9,10 +9,32 @@ return {
     'olivercederborg/poimandres.nvim',
     'akinsho/horizon.nvim',
     'olimorris/onedarkpro.nvim',
+    'AlexvZyl/nordic.nvim',
     -- :OnedarkproExportToKitty (puede exportar el colorscheme a kitty)
+  },
+  { -- Colorscheme manager
+    'vague2k/huez.nvim',
+    -- if you want registry related features, uncomment this
+    -- import = "huez-manager.import"
+    branch = 'stable',
+    -- event = 'UIEnter',
+    priority = 1100,
+
+    config = function()
+      require('huez').setup {
+        background = 'dark',
+        picker = {
+          themes = {
+            layout = 'top',
+          },
+        },
+      }
+    end,
   },
   {
     'sainnhe/sonokai',
+    lazy = false,
+    priority = 1000,
     config = function()
       vim.g.sonokai_enable_italic = 0 -- true?
       vim.g.sonokay_better_performance = 1 -- true?
@@ -25,9 +47,6 @@ return {
     end,
   },
   { 'catppuccin/nvim', name = 'catppuccin' },
-  {
-    'AlexvZyl/nordic.nvim',
-  },
   {
     'EdenEast/nightfox.nvim',
     config = function()
@@ -57,12 +76,7 @@ return {
   },
   {
     'tiagovla/tokyodark.nvim',
-    lazy = false,
-    priority = 1000,
     opts = { transparent_background = transparency },
-    config = function()
-      vim.cmd 'colorscheme sonokai'
-    end,
   },
   {
     'comfysage/evergarden',
