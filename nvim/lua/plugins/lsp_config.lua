@@ -31,6 +31,7 @@ return {
       'haskell-language-server',
       'fourmolu',
       'gopls',
+      'taplo', -- toml
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -47,6 +48,7 @@ return {
       gopls = {},
       html = {},
       lua_ls = {},
+      taplo = {},
       pyright = {
         settings = {
           pyright = {
