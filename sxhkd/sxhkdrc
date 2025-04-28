@@ -2,15 +2,21 @@
 XF86MonBrightness{Up,Down}
     dunstbrillo {up,down}
 
+alt + XF86MonBrightness{Up,Down}
+    dunstbrillo {toggle,toggle}
+
 # Audio
 XF86Audio{Play,Next,Prev}
     playerctl {play-pause,next,previous}
 
 XF86Audio{Mute,RaiseVolume,LowerVolume}
-    dunstvol {toggle,up,down}
+    dunstvol {toggle,up,down} 5
+
+alt + XF86Audio{RaiseVolume,LowerVolume}
+    dunstvol {up,down} 20
 
 shift + XF86Audio{RaiseVolume,LowerVolume}
-    dunstvol {UP,DOWN}
+    dunstvol {up,down} 1
 
 alt + b
     dunstbateria
