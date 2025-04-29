@@ -31,6 +31,9 @@ alt + shift + e
 alt + shift + space
     kitty -e yazi
 
+alt + shift + t
+    /opt/google/chrome/google-chrome --profile-directory=Default --app-id=ficljmaaiddafabdgbkkgkgmogdgkibi
+
 alt + shift + {b,o}
     {google-chrome-stable,obsidian}
 
