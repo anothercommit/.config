@@ -14,12 +14,6 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)
 
-export EDITOR='nvim'
-export PATH=$PATH:~/.local/bin/my-scripts/
-export PATH=$PATH:~/.local/bin/my-scripts/parser/
-export PATH=$PATH:~/.local/bin/my-scripts/spotify_to_tidal/
-export PATH=$PATH:~/.ghcup/bin/
-
 # Functions {{{
 mkcd ()
 {
