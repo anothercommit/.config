@@ -64,9 +64,9 @@ alias n='nvim'
 alias sn='sudoedit'
 
 alias l='eza '
-alias la='eza  -a'
-alias ll='eza  -al'
-alias lt='eza  -T'
+alias la='eza -a'
+alias ll='eza -al'
+alias lt='eza -T'
 
 alias tr='trash-put'
 alias trr='trash-restore'
@@ -74,11 +74,11 @@ alias icat='kitty +kitten icat'
 alias p='sudo pacman'
 alias sp='sudo pacman'
 alias sp='sudo pacman'
+alias sps='sudo pacman -S'
 alias du='du -sh'
 alias df='df -h'
 alias sdu='sudo du -sh'
 alias keysoup="sudo systemctl restart keyd"
-alias usefulfiles="yazi '/home/joaco/SecondBrain/1. Áreas 🛸/Informática/Archivos útiles'"
 
 # Git aliases
 alias g='git'
@@ -90,9 +90,6 @@ alias gcall="git commit -a -m \"🦎\""
 alias gcp="git commit -a -m \"🦎\" && git push"
 
 alias b='bat -p'
-
-alias herramientas='bat "/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Informática/Herramientas linux.md"'
-alias comandos='bat "/home/joaco/SecondBrain/1. Áreas 🛸/PKM/Informática/Comandos recurrentes.md"'
 # }}}
 
 eval "$(zoxide init zsh)"
