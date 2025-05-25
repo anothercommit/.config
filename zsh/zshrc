@@ -37,8 +37,6 @@ function yy() {
 bindkey -s '^o' 'yy\n'
 # }}}
 
-# Aliases {{{
-
 alias wifi='nmcli device wifi'
 alias datos='nmcli device wifi connect Joaco password joacojoaco'
 
@@ -90,7 +88,6 @@ alias gcall="git commit -a -m \"🦎\""
 alias gcp="git commit -a -m \"🦎\" && git push"
 
 alias b='bat -p'
-# }}}
 
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
