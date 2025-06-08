@@ -1,4 +1,4 @@
-[mgr]
+[manager]
 prepend_keymap = [
     { on = ["<BS>"], run = "escape --visual --select", desc = "Escape selection and visual mode (BS -> esc)" },
 ]
