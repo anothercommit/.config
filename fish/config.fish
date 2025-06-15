@@ -1,5 +1,6 @@
 if status is-interactive
     set -gx EDITOR vim
+    fish_add_path "/opt/local/bin/"
     fish_add_path /usr/local/bin
     fish_add_path ~/.local/bin/
     fish_add_path ~/.local/bin/my-scripts/
@@ -43,8 +44,7 @@ if status is-interactive
 
     alias zshedit="nvim ~/.config/zsh/zshrc"
     alias zshsource="source ~/.zshrc"
-    alias zshedit="nvim ~/.config/fish/config.fish"
-
+    alias fishedit="nvim ~/.config/fish/config.fish"
     alias n="nvim"
     alias sn="sudoedit"
 
