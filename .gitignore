@@ -14,6 +14,7 @@ kitty/font_settings.conf
 /streamrip/downloads.db
 /streamrip/failed_downloads.db
 
+!fish/
 !picom/
 !ly/
 !awesome/
