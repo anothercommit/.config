@@ -2,9 +2,9 @@ if status is-interactive
     set -gx EDITOR vim
     fish_add_path /usr/local/bin
     fish_add_path ~/.local/bin/
-    fish_add_path ~/.local/bin/my-scripts/
-    fish_add_path ~/.local/bin/my-scripts/parser/
-    fish_add_path ~/.local/bin/my-scripts/spotify_to_tidal/
+    fish_add_path ~/.local/bin/scripts/
+    fish_add_path ~/.local/bin/scripts/parser/
+    fish_add_path ~/.local/bin/scripts/spotify_to_tidal/
     fish_add_path ~/.ghcup/bin/
     set -g fish_greeting
     set -g fish_key_bindings fish_vi_key_bindings
@@ -41,9 +41,7 @@ if status is-interactive
     alias ...="cd ../.."
     alias rm="rm -v"
 
-    alias zshedit="nvim ~/.config/zsh/zshrc"
-    alias zshsource="source ~/.zshrc"
-    alias zshedit="nvim ~/.config/fish/config.fish"
+    alias fishedit="nvim ~/.config/fish/config.fish"
 
     alias n="nvim"
     alias sn="sudoedit"
@@ -56,10 +54,10 @@ if status is-interactive
     alias tr="trash-put"
     alias trr="trash-restore"
     alias icat="kitty +kitten icat"
-    alias p="sudo pacman"
-    alias sp="sudo pacman"
-    alias sp="sudo pacman"
-    alias sps="sudo pacman -S"
+    # alias sp="sudo pacman"
+    # alias sps="sudo pacman -S"
+    alias sp="sudo powerpill"
+    alias sps="sudo powerpill -S"
     alias du="du -sh"
     alias df="df -h"
     alias sdu="sudo du -sh"
