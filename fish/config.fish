@@ -15,6 +15,7 @@ if status is-interactive
     end
 
     bind --mode insert ctrl-o 'yy'
+    bind --mode insert ctrl-k 'fzfnvim'
 
     function yy --description 'yazi quit on directory'
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
