@@ -1,5 +1,6 @@
 if status is-interactive
     set -gx EDITOR vim
+    # fish_add_path "/opt/local/bin/"
     fish_add_path /usr/local/bin
     fish_add_path ~/.local/bin/
     fish_add_path ~/.local/bin/scripts/
@@ -8,10 +9,6 @@ if status is-interactive
     fish_add_path ~/.ghcup/bin/
     set -g fish_greeting
     set -g fish_key_bindings fish_vi_key_bindings
-    set -g hydro_multiline
-    set -g fish_prompt_pwd_dir_length 0
-    set -g hydro_color_git dc143c
-    set -g hydro_color_pwd 0eb4a3
 
     function mkcd --description 'cd to created directory'
         mkdir -p -- $argv && cd -P -- $argv
