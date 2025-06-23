@@ -25,6 +25,10 @@ alt + b
 super + Return
     kitty
 
+# super + k
+    # kitty -e fzfnvim
+
+
 alt + shift + e
     thunar
 
