@@ -14,25 +14,25 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Save and load folds
-vim.api.nvim_create_autocmd('BufWinLeave', {
-  desc = 'Save folds to buffer',
-  pattern = '*',
-  callback = function()
-    if vim.fn.bufname '%' ~= '' then
-      vim.cmd 'mkview'
-    end
-  end,
-})
+-- vim.api.nvim_create_autocmd('BufWinLeave', {
+--   desc = 'Save folds to buffer',
+--   pattern = '*',
+--   callback = function()
+--     if vim.fn.bufname '%' ~= '' then
+--       vim.cmd 'mkview'
+--     end
+--   end,
+-- })
 
-vim.api.nvim_create_autocmd('BufWinEnter', {
-  desc = 'Load folds to buffer',
-  pattern = '*',
-  callback = function()
-    if vim.fn.bufname '%' ~= '' then
-      vim.cmd 'silent! loadview'
-    end
-  end,
-})
+-- vim.api.nvim_create_autocmd('BufWinEnter', {
+--   desc = 'Load folds to buffer',
+--   pattern = '*',
+--   callback = function()
+--     if vim.fn.bufname '%' ~= '' then
+--       vim.cmd 'silent! loadview'
+--     end
+--   end,
+-- })
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 if vim.fn.exists 'g:vscode' == 0 then -- check if nvim is running in vscode

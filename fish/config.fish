@@ -11,7 +11,7 @@ if status is-interactive
     set -g fish_key_bindings fish_vi_key_bindings
 
     function mkcd --description 'cd to created directory'
-        mkdir -p -- $argv && cd -P -- $argv
+        mkdir $argv && cd $argv
     end
 
     bind --mode insert ctrl-o 'yy'

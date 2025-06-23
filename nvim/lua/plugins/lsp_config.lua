@@ -30,7 +30,7 @@ return {
       'pyright',
       'haskell-language-server',
       'fourmolu',
-      'gopls',
+      -- 'gopls',
       'taplo', -- toml
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
