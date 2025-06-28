@@ -75,9 +75,7 @@ kmset('n', '<leader><s-cr>', function()
     if f then
       open_terminal()
       vim.fn.chansend(term_id, { 'make\r\n' })
-      vim.cmd 'tabnew'
     else
-      vim.cmd 'tabnew'
       open_terminal()
       vim.fn.chansend(term_id, { 'makefile.py ' .. filename .. '\r\n' })
       vim.fn.chansend(term_id, { 'make\r\n' })
