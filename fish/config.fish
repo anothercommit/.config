@@ -7,6 +7,7 @@ if status is-interactive
     fish_add_path ~/.local/bin/scripts/parser/
     fish_add_path ~/.local/bin/scripts/spotify_to_tidal/
     fish_add_path ~/.ghcup/bin/
+    fish_add_path /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages
     set -g fish_greeting
     set -g fish_key_bindings fish_vi_key_bindings
 
