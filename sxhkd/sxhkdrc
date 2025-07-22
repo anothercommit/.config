@@ -51,7 +51,7 @@ control + space
     rofi -show drun
 
 super + period
-    rofimoji --skin-tone neutral -a copy
+    rofimoji --skin-tone neutral -a type copy
 
 alt + shift + l
     betterlockscreen -l dim
