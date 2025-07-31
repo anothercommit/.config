@@ -77,7 +77,7 @@ kmset('n', '<leader><s-cr>', function()
       vim.fn.chansend(term_id, { 'make\r\n' })
     else
       open_terminal()
-      vim.fn.chansend(term_id, { 'makefile.py ' .. filename .. '\r\n' })
+      vim.fn.chansend(term_id, { 'makefile ' .. filename .. '\r\n' })
       vim.fn.chansend(term_id, { 'make\r\n' })
     end
   else
