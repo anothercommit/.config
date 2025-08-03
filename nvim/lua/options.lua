@@ -55,14 +55,14 @@ o.splitbelow = true
 
 -- mostrar caracteres en los tab y etc
 --  See `:help 'list'`
-o.list = true
+-- o.list = true
 --  and `:help 'listchars'`
 --o.listchars = { tab = '»', trail = '·', nbsp = '␣', eol = '' }
 
 -- Preview substitutions live, as you type!
 o.inccommand = 'split'
 
-o.scrolloff = 10
+o.scrolloff = 3
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 o.hlsearch = true
