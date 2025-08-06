@@ -56,8 +56,9 @@ k('n', '<leader>o', '<cmd>Oil<cr>', { desc = '[O]il' })
 -- Terminal
 local function open_terminal()
   vim.cmd.vnew()
-  vim.cmd.term()
+  vim.cmd "term fish"
   vim.cmd.wincmd 'J'
+  vim.cmd "norm A"
   vim.api.nvim_win_set_height(0, 7)
 
   term_id = vim.bo.channel
@@ -73,16 +74,16 @@ k('n', '<leader><s-cr>', function()
 
     if f then
       open_terminal()
-      vim.fn.chansend(term_id, { 'make\r\n' })
+      vim.fn.chansend(term_id, { 'make\r' })
     else
       open_terminal()
-      vim.fn.chansend(term_id, { 'makefile ' .. filename .. '\r\n' })
-      vim.fn.chansend(term_id, { 'make\r\n' })
+      vim.fn.chansend(term_id, { 'makefile ' .. filename .. '\r' })
+      vim.fn.chansend(term_id, { 'make\r' })
     end
   else
     if filename:sub(-2) == 'hs' then
       open_terminal()
-      vim.fn.chansend(term_id, { 'ghci ' .. filename .. '\r\n' })
+      vim.fn.chansend(term_id, { 'ghci ' .. filename .. '\r' })
       vim.cmd.wincmd 'J'
     end
   end
