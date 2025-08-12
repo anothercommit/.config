@@ -37,6 +37,11 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
     opts = { signs = false },
   },
+  {
+    "cdmill/focus.nvim",
+    cmd = { "Focus", "Zen", "Narrow" },
+    opts = {}
+  },
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter',
