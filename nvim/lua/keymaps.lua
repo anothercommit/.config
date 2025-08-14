@@ -55,11 +55,11 @@ k('n', '<leader>o', '<cmd>Oil<cr>', { desc = '[O]il' })
 
 -- Terminal
 local function open_terminal()
-  vim.cmd.vnew()
+  vim.cmd "vs"
   vim.cmd "term fish"
-  vim.cmd.wincmd 'J'
+  vim.cmd.wincmd 'L'
   vim.cmd "norm A"
-  vim.api.nvim_win_set_height(0, 7)
+  vim.api.nvim_win_set_width(0, 30)
 
   term_id = vim.bo.channel
 end
