@@ -70,23 +70,14 @@ k('n', '<leader><s-cr>', function()
   local filename = vim.fn.expand '%:t'
 
   if filename:sub(-3) == 'cpp' then
-    local f, _ = io.open('makefile', 'r')
-
-    if f then
       open_terminal()
       vim.fn.chansend(term_id, { 'make\r' })
-    else
-      open_terminal()
-      vim.fn.chansend(term_id, { 'makefile ' .. filename .. '\r' })
-      vim.fn.chansend(term_id, { 'make\r' })
-    end
-  else
-    if filename:sub(-2) == 'hs' then
+  else if filename:sub(-2) == 'hs' then
       open_terminal()
       vim.fn.chansend(term_id, { 'ghci ' .. filename .. '\r' })
-      vim.cmd.wincmd 'J'
     end
   end
 end)
 
 k('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+k('t', 'jk', '<C-\\><C-n>', { desc = 'Exit terminal mode' })

@@ -19,7 +19,6 @@ o.swapfile = false
 o.signcolumn = 'no'
 vim.opt.laststatus = 3
 vim.opt.showtabline = 1 -- tabline: 0 (nunca), 1 (+1 archivo), 2 (siempre)
-o.winborder = 'rounded'
 
 o.number = true
 o.relativenumber = true
