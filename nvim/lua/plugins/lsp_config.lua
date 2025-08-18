@@ -1,4 +1,3 @@
-local diagnostic = require 'nightfox.group.modules.diagnostic'
 return {
   'neovim/nvim-lspconfig',
   dependencies = {

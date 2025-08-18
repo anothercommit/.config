@@ -17,6 +17,7 @@ o.writebackup = false
 o.swapfile = false
 
 o.signcolumn = 'no'
+vim.o.winborder = 'rounded'
 vim.opt.laststatus = 3
 vim.opt.showtabline = 1 -- tabline: 0 (nunca), 1 (+1 archivo), 2 (siempre)
 
