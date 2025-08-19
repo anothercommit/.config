@@ -3,7 +3,7 @@
 
 local k = vim.keymap.set
 
-vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
+vim.keymap.set({'n','v'}, '<leader>lf', vim.lsp.buf.format)
 
 k('n', '<leader>q', ':q', { noremap = 'true' })
 k('n', 'x', [["_x]], { noremap = 'true' })
@@ -31,7 +31,7 @@ k('n', '<esc>', [[<cmd>nohlsearch<cr>]], { noremap = 'true' })
 
 -- mover lineas
 k({ 'n', 'i' }, '<A-j>', '<cmd>m+<CR>', { desc = 'move line down', noremap = 'true' })
-k({ 'n', 'i' }, '<A-k>', '<cmd>m-2<CR>', { desc = 'move line up', noremap = 'true' })
+k({ 'n', 'i','v' }, '<A-k>', '<cmd>m-2<CR>', { desc = 'move line up', noremap = 'true' })
 
 k('v', '>', [[>gv]], { desc = 'indent +1 tab', noremap = 'true' })
 k('v', '<', [[<gv]], { desc = 'indent -1 tab', noremap = 'true' })
