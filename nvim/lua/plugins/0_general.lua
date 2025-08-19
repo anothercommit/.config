@@ -37,10 +37,23 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
     opts = { signs = false },
   },
+  -- Lua
   {
-    "cdmill/focus.nvim",
-    cmd = { "Focus", "Zen", "Narrow" },
-    opts = {}
+    "folke/zen-mode.nvim",
+    cmd = "ZenMode",
+    opts = {
+      window = {
+        backdrop = 0.95,
+        width = 0.70, -- <=1=porcentage of window, >1=amount of cells
+      },
+      plugins = {
+        options = {
+          enabled = true,
+          laststatus = 0,
+        },
+        twilight = { enabled = false },
+      },
+    },
   },
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
