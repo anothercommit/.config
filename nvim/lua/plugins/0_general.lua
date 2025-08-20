@@ -37,21 +37,26 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
     opts = { signs = false },
   },
-  -- Lua
   {
-    "folke/zen-mode.nvim",
-    cmd = "ZenMode",
+    "shortcuts/no-neck-pain.nvim",
+    version = "*",
     opts = {
-      window = {
-        backdrop = 0.95,
-        width = 0.70, -- <=1=porcentage of window, >1=amount of cells
-      },
-      plugins = {
-        options = {
+      width = 85,
+      buffers = {
+        -- colors = {
+        --   blend = -0.2
+        -- },
+        scratchPad = {
+          -- set to `false` to
+          -- disable auto-saving
           enabled = true,
-          laststatus = 0,
+          -- set to `nil` to default
+          -- to current working directory
+          location = "~/Documents/",
         },
-        twilight = { enabled = false },
+        bo = {
+          filetype = "md"
+        },
       },
     },
   },
