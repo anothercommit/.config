@@ -1,8 +1,15 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- vim.cmd "NoNeckPain"
 require 'options'
 require 'keymaps'
+
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		vim.cmd("NoNeckPain")
+	end,
+})
 
 -- Highlight when yanking (copying) text and deleting
 vim.api.nvim_create_autocmd('TextYankPost', {
