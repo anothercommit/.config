@@ -38,9 +38,27 @@ return {
     opts = { signs = false },
   },
   {
-    "cdmill/focus.nvim",
-    cmd = { "Focus", "Zen", "Narrow" },
-    opts = {}
+    "shortcuts/no-neck-pain.nvim",
+    version = "*",
+    opts = {
+      width = 85,
+      buffers = {
+        -- colors = {
+        --   blend = -0.2
+        -- },
+        scratchPad = {
+          -- set to `false` to
+          -- disable auto-saving
+          enabled = true,
+          -- set to `nil` to default
+          -- to current working directory
+          location = "~/Documents/",
+        },
+        bo = {
+          filetype = "md"
+        },
+      },
+    },
   },
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',

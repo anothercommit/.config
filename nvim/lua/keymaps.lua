@@ -3,7 +3,7 @@
 
 local k = vim.keymap.set
 
-vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
+vim.keymap.set({'n','v'}, '<leader>lf', vim.lsp.buf.format)
 
 k('n', '<leader>q', ':q', { noremap = 'true' })
 k('n', 'x', [["_x]], { noremap = 'true' })
@@ -31,7 +31,7 @@ k('n', '<esc>', [[<cmd>nohlsearch<cr>]], { noremap = 'true' })
 
 -- mover lineas
 k({ 'n', 'i' }, '<A-j>', '<cmd>m+<CR>', { desc = 'move line down', noremap = 'true' })
-k({ 'n', 'i' }, '<A-k>', '<cmd>m-2<CR>', { desc = 'move line up', noremap = 'true' })
+k({ 'n', 'i','v' }, '<A-k>', '<cmd>m-2<CR>', { desc = 'move line up', noremap = 'true' })
 
 k('v', '>', [[>gv]], { desc = 'indent +1 tab', noremap = 'true' })
 k('v', '<', [[<gv]], { desc = 'indent -1 tab', noremap = 'true' })
@@ -70,23 +70,14 @@ k('n', '<leader><s-cr>', function()
   local filename = vim.fn.expand '%:t'
 
   if filename:sub(-3) == 'cpp' then
-    local f, _ = io.open('makefile', 'r')
-
-    if f then
       open_terminal()
       vim.fn.chansend(term_id, { 'make\r' })
-    else
-      open_terminal()
-      vim.fn.chansend(term_id, { 'makefile ' .. filename .. '\r' })
-      vim.fn.chansend(term_id, { 'make\r' })
-    end
-  else
-    if filename:sub(-2) == 'hs' then
+  else if filename:sub(-2) == 'hs' then
       open_terminal()
       vim.fn.chansend(term_id, { 'ghci ' .. filename .. '\r' })
-      vim.cmd.wincmd 'J'
     end
   end
 end)
 
 k('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+k('t', 'jk', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
