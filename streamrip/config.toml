@@ -91,7 +91,7 @@ video_downloads_folder = "/home/joaco/StreamripDownloads/YouTubeVideos"
 # Create a database that contains all the track IDs downloaded so far
 # Any time a track logged in the database is requested, it is skipped
 # This can be disabled temporarily with the --no-db flag
-downloads_enabled = true
+downloads_enabled = false
 # Path to the downloads database 
 downloads_path = "/home/joaco/.config/streamrip/downloads.db"
 # If a download fails, the item ID is stored here. Then, `rip repair` can be
