@@ -69,10 +69,10 @@ k('n', '<leader><cr>', open_terminal)
 k('n', '<leader><s-cr>', function()
   local filename = vim.fn.expand '%:t'
 
-  if filename:sub(-3) == 'cpp' then
+  if filename:sub(-4) == '.cpp' or filename:sub(-2) == '.c' then
       open_terminal()
       vim.fn.chansend(term_id, { 'make\r' })
-  else if filename:sub(-2) == 'hs' then
+  else if filename:sub(-3) == '.hs' then
       open_terminal()
       vim.fn.chansend(term_id, { 'ghci ' .. filename .. '\r' })
     end
