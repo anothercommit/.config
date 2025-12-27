@@ -83,12 +83,11 @@ o.ttyfast = true -- let vim know that I am using a fast term
 o.virtualedit = 'block' -- allow cursor to move where there is no text in visual block mode
 o.visualbell = false -- stop beeping for non-error errors, please god
 
+
 -- esto no funciona por alguna razon
-o.formatoptions = o.formatoptions -- :help fo-table
-  + 'r' -- continue comment with enter
-  + 'n' -- smart auto indenting inside numbered lists
-  - '2' -- el 2 formatea teniendo en cuenta las sangrias
-  - 'o' -- que 'o' no continue un comentario
+o.formatoptions:remove({ 'o' })
+-- o.formatoptions = o.formatoptions -- :help fo-table
+--   - 'o' -- que 'o' no continue un comentario
 
 o.shortmess = o.shortmess
   + 'A' -- ignore annoying swapfile messages

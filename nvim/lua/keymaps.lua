@@ -59,7 +59,7 @@ local function open_terminal()
   vim.cmd "term fish"
   vim.cmd.wincmd 'L'
   vim.cmd "norm A"
-  vim.api.nvim_win_set_width(0, 30)
+  vim.api.nvim_win_set_width(0, 20)
 
   term_id = vim.bo.channel
 end
@@ -69,13 +69,16 @@ k('n', '<leader><cr>', open_terminal)
 k('n', '<leader><s-cr>', function()
   local filename = vim.fn.expand '%:t'
 
+  open_terminal()
+
   if filename:sub(-4) == '.cpp' or filename:sub(-2) == '.c' then
-      open_terminal()
       vim.fn.chansend(term_id, { 'make\r' })
-  else if filename:sub(-3) == '.hs' then
-      open_terminal()
+  end
+  if filename:sub(-3) == '.hs' then
       vim.fn.chansend(term_id, { 'ghci ' .. filename .. '\r' })
-    end
+  end
+  if filename:sub(-3) == '.rs' then
+      vim.fn.chansend(term_id, { 'cargo run \r' })
   end
 end)
 
