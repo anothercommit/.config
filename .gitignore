@@ -3,6 +3,8 @@
 .DS_Store
 fish_variables
 
+!tiddl/
+
 !nvim/
 ./nvim/lazy-lock.json
 
