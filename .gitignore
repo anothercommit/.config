@@ -7,7 +7,7 @@ fish_variables
 
 !copyq/
 copyq/*
-!copyq.conf
+!copyq/copyq.conf
 !copyq/themes/
 
 !nvim/
