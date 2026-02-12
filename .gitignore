@@ -5,8 +5,8 @@ fish_variables
 
 !tiddl/
 
-!./copyq/copyq.conf
-!./copyq/themes/
+!copyq/copyq.conf
+!copyq/themes/
 
 !nvim/
 ./nvim/lazy-lock.json
