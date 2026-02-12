@@ -3,6 +3,13 @@
 .DS_Store
 fish_variables
 
+!tiddl/
+
+!copyq/
+copyq/*
+!copyq/copyq.conf
+!copyq/themes/
+
 !nvim/
 ./nvim/lazy-lock.json
 
