@@ -5,7 +5,9 @@ fish_variables
 
 !tiddl/
 
-!copyq/copyq.conf
+!copyq/
+copyq/*
+!copyq.conf
 !copyq/themes/
 
 !nvim/
