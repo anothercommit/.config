@@ -1,6 +1,7 @@
 background_opacity 0.90
 include theme.conf
-font_family      CommitMonoJoaco Nerd Font
+
+font_family      CommitMonoJoa NF
 # font_family      CommitMono Nerd Font Mono
 # ¿bajar CommitMono con la a abierta y nerd-patchearla?
 # font_family JetBrainsMono Nerd Font
