@@ -1,5 +1,4 @@
 if status is-interactive
-    set -g tide_pwd_display last
     set -gx EDITOR nvim
     fish_add_path "/opt/local/bin/"
     fish_add_path /usr/local/bin
@@ -11,6 +10,12 @@ if status is-interactive
     fish_add_path /Library/Frameworks/Python.framework/Versions/3.13/bin
     set -g fish_greeting
     set -g fish_key_bindings fish_vi_key_bindings
+
+    # hydro prompt settings
+    set -g fish_prompt_pwd_dir_length 0
+    set -g hydro_color_pwd "5394d5"
+    set -g hydro_color_git "ce7a47"
+    set -g hydro_symbol_prompt "->"
 
     function mkcd --description 'cd to created directory'
         mkdir $argv && cd $argv
@@ -30,7 +35,6 @@ if status is-interactive
         end
         rm -f "$tmp"
     end
-
     alias wifi="nmcli device wifi"
     alias reboot="systemctl reboot"
 
@@ -56,6 +60,7 @@ if status is-interactive
     alias icat="kitty +kitten icat"
     alias sp="sudo pacman"
     alias sps="sudo pacman -S"
+    alias spss="sudo pacman -Ss"
     alias du="du -sh"
     alias df="df -h"
     alias sdu="sudo du -sh"
@@ -73,4 +78,7 @@ if status is-interactive
     alias b="bat -p"
 
     zoxide init fish | source
+
+    # hydro prompt
+     
 end

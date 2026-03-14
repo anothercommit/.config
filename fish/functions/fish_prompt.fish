@@ -1,6 +1,3 @@
-function fish_prompt
-        set_color $fish_color_cwd
-        echo -n (path basename $PWD)
-        set_color normal
-        echo -n ' -> '
+function fish_prompt --description Hydro
+    echo -e -n "$_hydro_color_start$hydro_symbol_start$hydro_color_normal$_hydro_color_pwd$_hydro_pwd$hydro_color_normal $_hydro_color_git$$_hydro_git$hydro_color_normal$_hydro_color_duration$_hydro_cmd_duration$hydro_color_normal$_hydro_status$hydro_color_normal "
 end
