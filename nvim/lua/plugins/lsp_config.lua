@@ -17,6 +17,7 @@ return {
 
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
+      'svls',
       'emmet-language-server',
       'cssls',
       'biome',
@@ -40,7 +41,9 @@ return {
     local servers = {
       -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
       clangd = {},
+      svls={},
       bashls = {},
+      veridian = {},
       cssls = {},
       emmet_language_server = {},
       hls = {},
