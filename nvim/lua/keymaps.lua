@@ -9,6 +9,11 @@ k('n', '<leader>q', ':q', { noremap = 'true' })
 k('n', 'x', [["_x]], { noremap = 'true' })
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- add space
+-- k('n', '<Space><Space>', '<cmd>norm a h<cr>', { noremap = 'true', desc = 'insert space to the right' })
+-- k('n', '<S-Space>', '<cmd>norm i l<cr>', { noremap = 'true', desc = 'insert space to the left' })
+
+
 k({ 'n', 'v' }, '<leader>f', 'zf', { noremap = 'true', desc = '[f]old' })
 
 k('n', '<C-d>', [[<C-d>zz]], { noremap = 'true' })
@@ -35,6 +40,8 @@ k({ 'n', 'i','v' }, '<A-k>', '<cmd>m-2<CR>', { desc = 'move line up', noremap = 
 
 k('v', '>', [[>gv]], { desc = 'indent +1 tab', noremap = 'true' })
 k('v', '<', [[<gv]], { desc = 'indent -1 tab', noremap = 'true' })
+k('n', '>', [[>>]], { desc = 'indent +1 tab', noremap = 'true' })
+k('n', '<', [[<<]], { desc = 'indent -1 tab', noremap = 'true' })
 
 -- kmset('n', '<C-m>', '<cmd>nohlsearch<CR>', { noremap = 'true' })
 
