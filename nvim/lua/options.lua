@@ -1,6 +1,16 @@
 o = vim.opt
 g = vim.g
 
+-- local en     = [[`qwertyuiop[]asdfghjkl\;'zxcvbnm]]
+-- local canary = [[wlypkkzxou\;[]crstbfneia'jvdgqmh]]
+-- local en_shift     = [[~QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>]]
+-- local canary_shift = [[WLYPKZXOU\;{}CRSTBFNEIA\"JVDGQMH?<>]]
+--
+-- vim.opt.langmap = vim.fn.join({
+--   canary_shift .. ';' .. canary_shift,
+--   canary .. ';' .. en
+-- }, ',')
+
 vim.api.nvim_create_autocmd('TermOpen', {
   group = vim.api.nvim_create_augroup('custom-term-open', { clear = true }),
   callback = function()

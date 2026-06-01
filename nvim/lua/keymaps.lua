@@ -3,15 +3,25 @@
 
 local k = vim.keymap.set
 
+
+-- Canary layout remaps
+-- k('n', 'f', 'h', { noremap = 'true' })
+-- k('n', 'n', 'j', { noremap = 'true' })
+-- k('n', 'e', 'k', { noremap = 'true' })
+-- k('n', 'i', 'l', { noremap = 'true' })
+
 vim.keymap.set({'n','v'}, '<leader>lf', vim.lsp.buf.format)
 
 k('n', '<leader>q', ':q', { noremap = 'true' })
 k('n', 'x', [["_x]], { noremap = 'true' })
+
+k('n', 'x', [["_x]], { noremap = 'true' })
+k('n', 'x', [["_x]], { noremap = 'true' })
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- add space
--- k('n', '<Space><Space>', '<cmd>norm a h<cr>', { noremap = 'true', desc = 'insert space to the right' })
--- k('n', '<S-Space>', '<cmd>norm i l<cr>', { noremap = 'true', desc = 'insert space to the left' })
+k('n', '<Space><Space>', '<cmd>norm a h<cr>', { noremap = 'true', desc = 'insert space to the right' })
+k('n', '<SSpace>', '<cmd>norm i l<cr>', { noremap = 'true', desc = 'insert space to the left' })
 
 
 k({ 'n', 'v' }, '<leader>f', 'zf', { noremap = 'true', desc = '[f]old' })
@@ -30,6 +40,8 @@ k('n', '<BS>', '<cmd>:w<cr>', { noremap = 'true' })
 
 -- <esc>
 k('v', '<BS>', '<esc>', { noremap = 'true' })
+k({ 'i', 't' }, 'ne', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
+k({ 'i', 't' }, 'NE', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
 k({ 'i', 't' }, 'jk', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
 k({ 'i', 't' }, 'JK', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
 k('n', '<esc>', [[<cmd>nohlsearch<cr>]], { noremap = 'true' })

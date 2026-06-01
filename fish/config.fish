@@ -21,8 +21,8 @@ if status is-interactive
         mkdir $argv && cd $argv
     end
 
-    bind --mode insert ctrl-o 'yy'
-    bind --mode insert ctrl-k 'fzfnvim'
+    bind --mode insert ctrl-y 'yy'
+    bind --mode insert ctrl-e 'fzfnvim'
 
     function yy --description 'yazi quit on directory'
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
