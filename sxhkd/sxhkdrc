@@ -1,3 +1,7 @@
+# toggle keyboard layout
+alt + space
+    setxkbmap -query | grep -q 'canary' && setxkbmap es || setxkbmap canary
+
 # Brillo
 XF86MonBrightness{Up,Down}
     dbrillo {up,down}
