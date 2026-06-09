@@ -6,7 +6,8 @@ return {
     'nyoom-engineering/oxocarbon.nvim',
     'akinsho/horizon.nvim',
     'olimorris/onedarkpro.nvim',
-  },
+    'rebelot/kanagawa.nvim',
+    },
   { -- Colorscheme manager
     'vague2k/huez.nvim',
     -- if you want registry related features, uncomment this
