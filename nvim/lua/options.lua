@@ -51,7 +51,7 @@ o.smartcase = true
 o.showmatch = true -- show matching parenthesis on cursor hover
 
 o.background = 'dark'
-o.wrap = false
+o.wrap = true
 o.cmdheight = 0
 o.foldmethod = 'manual'
 

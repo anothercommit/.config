@@ -33,7 +33,7 @@ if status is-interactive
                 cd "$cwd"
             end
         end
-        rm -f "$tmp"
+        command rm -f "$tmp"
     end
     alias wifi="nmcli device wifi"
     alias reboot="systemctl reboot"
