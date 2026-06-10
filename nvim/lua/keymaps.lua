@@ -40,8 +40,8 @@ k('n', '<BS>', '<cmd>:w<cr>', { noremap = 'true' })
 
 -- <esc>
 k('v', '<BS>', '<esc>', { noremap = 'true' })
-k({ 'i', 't' }, 'ne', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
-k({ 'i', 't' }, 'NE', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
+-- k({ 'i', 't' }, 'ne', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
+-- k({ 'i', 't' }, 'NE', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
 k({ 'i', 't' }, 'jk', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
 k({ 'i', 't' }, 'JK', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
 k('n', '<esc>', [[<cmd>nohlsearch<cr>]], { noremap = 'true' })
