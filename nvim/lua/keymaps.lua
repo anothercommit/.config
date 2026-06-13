@@ -24,8 +24,8 @@ local canary_shift = [[FNEI]]
 -- Canary layout hjkl remaps
 vim.opt.langmap = 'fh,hf,nj,jn,ek,ke,il,li,FH,HF,NJ,JN,EK,KE,IL,LI'
 
-k({ 'i', 't' }, 'nk', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
-k({ 'i', 't' }, 'NK', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
+k({ 'i', 't' }, 'cj', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
+k({ 'i', 't' }, 'CJ', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
 -- k({ 'i', 't' }, 'jk', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
 -- k({ 'i', 't' }, 'JK', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
 -- k('t', 'jk', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
