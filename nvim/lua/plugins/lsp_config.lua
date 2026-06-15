@@ -42,8 +42,24 @@ return {
     local servers = {
       -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
       -- asm_lsp={},
+      armls = {
+        cmd = { '/bin/armls' },
+        filetypes = { 'asm' },
+        settings = {
+          armls = {
+            diagnostics = {
+              enable = true,
+              disableCategories = {
+                'invalidOperand',
+                'tooManyOperands',
+                'tooFewOperands',
+              },
+            },
+          },
+        },
+      },
       clangd = {},
-      svls={},
+      svls = {},
       bashls = {},
       veridian = {},
       cssls = {},
