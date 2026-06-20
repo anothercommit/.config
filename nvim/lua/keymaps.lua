@@ -3,14 +3,34 @@
 
 local k = vim.keymap.set
 
+local function escape(str)
+  -- You need to escape these characters to work correctly
+  local escape_chars = [[;,."|\]]
+  return vim.fn.escape(str, escape_chars)
+end
 
--- Canary layout remaps
--- k('n', 'f', 'h', { noremap = 'true' })
--- k('n', 'n', 'j', { noremap = 'true' })
--- k('n', 'e', 'k', { noremap = 'true' })
--- k('n', 'i', 'l', { noremap = 'true' })
+local qwerty = [[hjkl]]
+local canary = [[fnei]]
+local qwerty_shift = [[HJKL]]
+local canary_shift = [[FNEI]]
 
-vim.keymap.set({'n','v'}, '<leader>lf', vim.lsp.buf.format)
+-- Esto es por si hay que
+-- vim.opt.langmap = vim.fn.join({
+--     -- | `to` should be first     | `from` should be second
+--     escape(canary_shift) .. ';' .. escape(qwerty_shift),
+--     escape(canary) .. ';' .. escape(qwerty),
+-- }, ',')
+
+-- Canary layout hjkl remaps
+vim.opt.langmap = 'fh,hf,nj,jn,ek,ke,il,li,FH,HF,NJ,JN,EK,KE,IL,LI'
+
+k({ 'i', 't' }, 'cj', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
+k({ 'i', 't' }, 'CJ', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
+-- k({ 'i', 't' }, 'jk', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
+-- k({ 'i', 't' }, 'JK', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
+-- k('t', 'jk', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
+vim.keymap.set({ 'n', 'v' }, '<leader>lf', vim.lsp.buf.format)
 
 k('n', '<leader>q', ':q', { noremap = 'true' })
 k('n', 'x', [["_x]], { noremap = 'true' })
@@ -22,7 +42,6 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- add space
 k('n', '<Space><Space>', '<cmd>norm a h<cr>', { noremap = 'true', desc = 'insert space to the right' })
 k('n', '<SSpace>', '<cmd>norm i l<cr>', { noremap = 'true', desc = 'insert space to the left' })
-
 
 k({ 'n', 'v' }, '<leader>f', 'zf', { noremap = 'true', desc = '[f]old' })
 
@@ -40,15 +59,11 @@ k('n', '<BS>', '<cmd>:w<cr>', { noremap = 'true' })
 
 -- <esc>
 k('v', '<BS>', '<esc>', { noremap = 'true' })
--- k({ 'i', 't' }, 'ne', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
--- k({ 'i', 't' }, 'NE', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
-k({ 'i', 't' }, 'jk', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
-k({ 'i', 't' }, 'JK', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
 k('n', '<esc>', [[<cmd>nohlsearch<cr>]], { noremap = 'true' })
 
 -- mover lineas
 k({ 'n', 'i' }, '<A-j>', '<cmd>m+<CR>', { desc = 'move line down', noremap = 'true' })
-k({ 'n', 'i','v' }, '<A-k>', '<cmd>m-2<CR>', { desc = 'move line up', noremap = 'true' })
+k({ 'n', 'i', 'v' }, '<A-k>', '<cmd>m-2<CR>', { desc = 'move line up', noremap = 'true' })
 
 k('v', '>', [[>gv]], { desc = 'indent +1 tab', noremap = 'true' })
 k('v', '<', [[<gv]], { desc = 'indent -1 tab', noremap = 'true' })
@@ -74,10 +89,10 @@ k('n', '<leader>o', '<cmd>Oil<cr>', { desc = '[O]il' })
 
 -- Terminal
 local function open_terminal()
-  vim.cmd "vs"
-  vim.cmd "term fish"
+  vim.cmd 'vs'
+  vim.cmd 'term fish'
   vim.cmd.wincmd 'L'
-  vim.cmd "norm A"
+  vim.cmd 'norm A'
   vim.api.nvim_win_set_width(0, 20)
 
   term_id = vim.bo.channel
@@ -91,15 +106,14 @@ k('n', '<leader><s-cr>', function()
   open_terminal()
 
   if filename:sub(-4) == '.cpp' or filename:sub(-2) == '.c' then
-      vim.fn.chansend(term_id, { 'make\r' })
+    vim.fn.chansend(term_id, { 'make\r' })
   end
   if filename:sub(-3) == '.hs' then
-      vim.fn.chansend(term_id, { 'ghci ' .. filename .. '\r' })
+    vim.fn.chansend(term_id, { 'ghci ' .. filename .. '\r' })
   end
   if filename:sub(-3) == '.rs' then
-      vim.fn.chansend(term_id, { 'cargo run \r' })
+    vim.fn.chansend(term_id, { 'cargo run \r' })
   end
 end)
 
 k('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-k('t', 'jk', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
