@@ -9,10 +9,10 @@ local function escape(str)
   return vim.fn.escape(str, escape_chars)
 end
 
-local qwerty = [[hjkl]]
-local canary = [[fnei]]
-local qwerty_shift = [[HJKL]]
-local canary_shift = [[FNEI]]
+-- local qwerty = [[hjkl]]
+-- local canary = [[fnei]]
+-- local qwerty_shift = [[HJKL]]
+-- local canary_shift = [[FNEI]]
 
 -- Esto es por si hay que
 -- vim.opt.langmap = vim.fn.join({
@@ -22,7 +22,10 @@ local canary_shift = [[FNEI]]
 -- }, ',')
 
 -- Canary layout hjkl remaps
-vim.opt.langmap = 'fh,hf,nj,jn,ek,ke,il,li,FH,HF,NJ,JN,EK,KE,IL,LI'
+
+if vim.loop.os_uname().sysname ~= 'Darwin' then
+  vim.opt.langmap = 'fh,hf,nj,jn,ek,ke,il,li,FH,HF,NJ,JN,EK,KE,IL,LI'
+end
 
 k({ 'i', 't' }, 'cj', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
 k({ 'i', 't' }, 'CJ', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
