@@ -29,8 +29,8 @@ return {
       'clangd',
       'ruff',
       'pyright',
-      'haskell-language-server',
-      'fourmolu',
+      -- 'haskell-language-server',
+      -- 'fourmolu',
       -- 'gopls',
       'taplo', -- toml
     })
