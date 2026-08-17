@@ -56,8 +56,8 @@ if status is-interactive
     alias ll="eza -al"
     alias lt="eza -T"
 
-    alias tr="trash-put"
-    alias trr="trash-restore"
+    #    alias tr="trash-put"
+    #    alias trr="trash-restore"
     alias icat="kitty +kitten icat"
     alias sp="sudo pacman"
     alias sps="sudo pacman -S"
