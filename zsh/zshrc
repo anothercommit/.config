@@ -63,8 +63,6 @@ alias la='eza -a'
 alias ll='eza -al'
 alias lt='eza -T'
 
-alias tr='trash-put'
-alias trr='trash-restore'
 alias icat='kitty +kitten icat'
 alias p='sudo pacman'
 alias sp='sudo pacman'
