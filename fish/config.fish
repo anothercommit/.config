@@ -45,6 +45,7 @@ if status is-interactive
     alias ..="cd .."
     alias ...="cd ../.."
     alias rm="rm -v"
+    alias updatecalibre="sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin"
 
     alias fishedit="nvim ~/.config/fish/config.fish"
 
