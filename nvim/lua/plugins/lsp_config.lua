@@ -1,4 +1,10 @@
 return {
+  {
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
+  },
+  
   'neovim/nvim-lspconfig',
   dependencies = {
     'williamboman/mason.nvim',
@@ -19,6 +25,7 @@ return {
     vim.list_extend(ensure_installed, {
       -- 'asm-lsp',
       'svls',
+      'ts_ls',
       'emmet-language-server',
       'cssls',
       'biome',
@@ -42,26 +49,9 @@ return {
     local servers = {
       -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
       -- asm_lsp={},
-      armls = {
-        cmd = { '/bin/armls' },
-        filetypes = { 'asm' },
-        settings = {
-          armls = {
-            diagnostics = {
-              enable = true,
-              disableCategories = {
-                'invalidOperand',
-                'tooManyOperands',
-                'tooFewOperands',
-              },
-            },
-          },
-        },
-      },
       clangd = {},
       svls = {},
       bashls = {},
-      veridian = {},
       cssls = {},
       emmet_language_server = {},
       hls = {},
