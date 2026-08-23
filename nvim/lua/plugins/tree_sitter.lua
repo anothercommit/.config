@@ -8,6 +8,7 @@ return { -- Highlight, edit, and navigate code
 
       'c',
       'cpp',
+      'rust',
 
       'lua',
       'luadoc',

@@ -84,8 +84,8 @@ k('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 k('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 k('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
-k('n', '<leader>;', 'gt', { desc = 'move next tab' })
-k('n', '<leader>a', 'gT', { desc = 'move previos tab' })
+k('n', '<leader>a', 'gt', { desc = 'move next tab' })
+k('n', '<leader>c', 'gT', { desc = 'move previos tab' })
 
 -- Oil
 k('n', '<leader>o', '<cmd>Oil<cr>', { desc = '[O]il' })
