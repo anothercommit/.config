@@ -3,7 +3,7 @@ local transparency = false
 return {
   {
     'folke/tokyonight.nvim',
-    'nyoom-engineering/oxocarbon.nvim',
+    -- 'nyoom-engineering/oxocarbon.nvim',
     'akinsho/horizon.nvim',
     'olimorris/onedarkpro.nvim',
     'rebelot/kanagawa.nvim',
