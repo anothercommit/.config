@@ -25,6 +25,24 @@ end
 
 if vim.loop.os_uname().sysname ~= 'Darwin' then
   vim.opt.langmap = 'fh,hf,nj,jn,ek,ke,il,li,FH,HF,NJ,JN,EK,KE,IL,LI'
+
+  --  See `:help wincmd` for a list of all window commands
+  k('n', '<C-f>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+  k('n', '<C-i>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+  k('n', '<C-n>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+  k('n', '<C-e>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+  k('n', '<leader>a', 'gt', { desc = 'move next tab' })
+  k('n', '<leader>c', 'gT', { desc = 'move previos tab' })
+else
+  k('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+  k('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+  k('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+  k('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+  k('n', '<leader>;', 'gt', { desc = 'move next tab' })
+  k('n', '<leader>a', 'gT', { desc = 'move previos tab' })
+
 end
 
 k({ 'i', 't' }, 'cj', '<esc>', { desc = 'Exit insert mode', noremap = 'true' })
@@ -78,14 +96,6 @@ k('n', '<', [[<<]], { desc = 'indent -1 tab', noremap = 'true' })
 k('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 k('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
---  See `:help wincmd` for a list of all window commands
-k('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-k('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-k('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-k('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-
-k('n', '<leader>a', 'gt', { desc = 'move next tab' })
-k('n', '<leader>c', 'gT', { desc = 'move previos tab' })
 
 -- Oil
 k('n', '<leader>o', '<cmd>Oil<cr>', { desc = '[O]il' })
