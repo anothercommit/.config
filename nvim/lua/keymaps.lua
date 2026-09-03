@@ -33,7 +33,7 @@ if vim.loop.os_uname().sysname ~= 'Darwin' then
   k('n', '<C-e>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
   k('n', '<leader>a', 'gt', { desc = 'move next tab' })
-  k('n', '<leader>c', 'gT', { desc = 'move previos tab' })
+  k('n', '<leader>A', 'gT', { desc = 'move previos tab' })
 else
   k('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
   k('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })

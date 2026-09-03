@@ -10,7 +10,10 @@ return {
     local lspkind = require 'lspkind'
 
     cmp.setup {
-      completion = { completeopt = 'menu,menuone,noinsert' },
+      completion = { 
+        completeopt = 'menu,menuone,noinsert',
+        autocomplete = { cmp.TriggerEvent.TextChanged },
+      },
 
       -- For an understanding of why these mappings were
       -- chosen, you will need to read `:help ins-completion`
