@@ -39,6 +39,8 @@ if status is-interactive
     alias wifi="nmcli device wifi"
     alias reboot="systemctl reboot"
 
+    alias untar="tar -xvzf"
+
     alias py="python"
     alias g++f="g++ -std=gnu++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG"
 
