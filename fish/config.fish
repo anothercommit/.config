@@ -86,3 +86,7 @@ if status is-interactive
     # hydro prompt
      
 end
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/joaco/.local/bin" $PATH
